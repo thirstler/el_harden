@@ -5,7 +5,7 @@ What does this do?
 This is a collection of scripts that will edit a lot of configuration on the
 target system in the hope of making it comply with site policy or one of the
 usual standard benchmarks. Currently it implements rules for the USGCB and the
-C2S benchmarks (C2S being a clone of the CIS benchmark).
+C2S benchmarks (C2S being roughly a clone of the CIS benchmark).
 
 Current state:
 
