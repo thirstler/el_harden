@@ -1,4 +1,4 @@
-# SecFix Version 1
+# EL Harden
 
 What does this do?
 
@@ -26,7 +26,7 @@ Notes:
    trust the wheel group) because the root password is set to a large random
    value. Use "sudo -s" - or "sudo -l" or whatever.
  - The contained rules are not entirely complete. Rules that are satisifed by
-   the default RHEL6 configuration are not present. If you run this on a newly
+   the default RHEL configuration are not present. If you run this on a newly
    provisioned system it won't be an issue. If you're trying to harden an
    existing system with a lot of configuration, it could miss stuff. You've be
    warned.
@@ -35,7 +35,12 @@ Notes:
    has issues but mostly because it is configurable. Meaning you can specify
    log hosts, NTP servers and other variables necessary to fill in some of the
    gaps left by a generic remediation.
-
+ - Last but not least: Get a configuration management system (something like
+   Foreman/Puppet). Scripts like this are really useful for configure-on-deploy
+   setups but you should have a nice site config that meets target
+   requirements, there's no such thing as running something that will "harden"
+   your OS.
+   
 Prerequisites:
 
  - The target system needs to be able to install packages with yum. If the
