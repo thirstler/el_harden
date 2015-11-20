@@ -1,0 +1,1 @@
+../../generic/service_ntpd_enabled.sh

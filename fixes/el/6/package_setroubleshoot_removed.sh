@@ -1,0 +1,1 @@
+../../generic/package_setroubleshoot_removed.sh

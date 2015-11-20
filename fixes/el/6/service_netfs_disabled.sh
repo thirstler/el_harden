@@ -1,0 +1,1 @@
+../../generic/service_netfs_disabled.sh

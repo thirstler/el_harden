@@ -1,0 +1,1 @@
+../../generic/selinux_policytype.sh

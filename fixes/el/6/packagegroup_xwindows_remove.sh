@@ -1,0 +1,1 @@
+../../generic/packagegroup_xwindows_remove.sh

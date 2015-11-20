@@ -1,0 +1,1 @@
+../../generic/disable_interactive_boot.sh

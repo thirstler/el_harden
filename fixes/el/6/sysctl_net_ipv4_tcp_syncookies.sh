@@ -1,0 +1,1 @@
+../../generic/sysctl_net_ipv4_tcp_syncookies.sh

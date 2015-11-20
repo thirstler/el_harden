@@ -1,0 +1,1 @@
+../../generic/no_empty_passwords.sh

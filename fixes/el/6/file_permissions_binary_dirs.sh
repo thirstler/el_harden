@@ -1,0 +1,1 @@
+../../generic/file_permissions_binary_dirs.sh

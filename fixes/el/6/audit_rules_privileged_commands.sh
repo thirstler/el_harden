@@ -1,0 +1,1 @@
+../../generic/audit_rules_privileged_commands.sh

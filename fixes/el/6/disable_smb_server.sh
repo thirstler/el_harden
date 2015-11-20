@@ -1,0 +1,1 @@
+../../generic/disable_smb_server.sh

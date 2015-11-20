@@ -1,0 +1,1 @@
+../../generic/kernel_module_jffs2_disabled.sh

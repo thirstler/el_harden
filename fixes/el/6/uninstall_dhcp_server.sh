@@ -1,0 +1,1 @@
+../../generic/uninstall_dhcp_server.sh

@@ -1,0 +1,1 @@
+../../generic/umask_for_daemons.sh

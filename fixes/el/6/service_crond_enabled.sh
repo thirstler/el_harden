@@ -1,0 +1,1 @@
+../../generic/service_crond_enabled.sh

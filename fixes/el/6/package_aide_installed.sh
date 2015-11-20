@@ -1,0 +1,1 @@
+../../generic/package_aide_installed.sh

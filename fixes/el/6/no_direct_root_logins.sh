@@ -1,0 +1,1 @@
+../../generic/no_direct_root_logins.sh

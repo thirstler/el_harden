@@ -1,0 +1,1 @@
+../../generic/rsyslog_send_messages_to_logserver.sh

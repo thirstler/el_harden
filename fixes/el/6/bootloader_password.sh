@@ -1,0 +1,1 @@
+../../generic/bootloader_password.sh

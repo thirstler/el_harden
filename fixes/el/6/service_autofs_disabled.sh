@@ -1,0 +1,1 @@
+../../generic/service_autofs_disabled.sh

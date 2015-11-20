@@ -1,0 +1,1 @@
+../../generic/package_rsyslog_installed.sh

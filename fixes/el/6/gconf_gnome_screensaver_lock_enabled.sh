@@ -1,0 +1,1 @@
+../../generic/gconf_gnome_screensaver_lock_enabled.sh

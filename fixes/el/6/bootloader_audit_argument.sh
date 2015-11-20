@@ -1,0 +1,1 @@
+../../generic/bootloader_audit_argument.sh

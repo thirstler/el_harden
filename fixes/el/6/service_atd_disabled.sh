@@ -1,0 +1,1 @@
+../../generic/service_atd_disabled.sh

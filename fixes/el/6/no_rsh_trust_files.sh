@@ -1,0 +1,1 @@
+../../generic/no_rsh_trust_files.sh

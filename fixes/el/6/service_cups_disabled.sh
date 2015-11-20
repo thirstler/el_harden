@@ -1,0 +1,1 @@
+../../generic/service_cups_disabled.sh

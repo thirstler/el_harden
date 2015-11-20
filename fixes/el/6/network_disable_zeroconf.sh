@@ -1,0 +1,1 @@
+../../generic/network_disable_zeroconf.sh

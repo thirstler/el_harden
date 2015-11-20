@@ -1,0 +1,1 @@
+../../generic/selinux_state.sh

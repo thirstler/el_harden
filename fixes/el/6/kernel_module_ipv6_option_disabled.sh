@@ -1,0 +1,1 @@
+../../generic/kernel_module_ipv6_option_disabled.sh

@@ -1,0 +1,1 @@
+../../generic/network_ipv6_disable_rpc.sh

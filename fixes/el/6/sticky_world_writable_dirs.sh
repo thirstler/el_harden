@@ -1,0 +1,1 @@
+../../generic/sticky_world_writable_dirs.sh

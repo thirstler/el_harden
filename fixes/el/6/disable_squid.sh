@@ -1,0 +1,1 @@
+../../generic/disable_squid.sh

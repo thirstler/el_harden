@@ -1,0 +1,1 @@
+../../generic/kernel_module_squashfs_disabled.sh

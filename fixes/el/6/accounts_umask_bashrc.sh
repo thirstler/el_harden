@@ -1,0 +1,1 @@
+../../generic/accounts_umask_bashrc.sh

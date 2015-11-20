@@ -1,0 +1,1 @@
+../../generic/kernel_module_sctp_disabled.sh

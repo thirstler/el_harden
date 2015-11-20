@@ -1,0 +1,1 @@
+../../generic/package_rsh_removed.sh

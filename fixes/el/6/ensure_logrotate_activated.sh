@@ -1,0 +1,1 @@
+../../generic/ensure_logrotate_activated.sh

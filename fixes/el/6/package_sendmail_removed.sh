@@ -1,0 +1,1 @@
+../../generic/package_sendmail_removed.sh

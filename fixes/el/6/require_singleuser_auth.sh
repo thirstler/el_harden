@@ -1,0 +1,1 @@
+../../generic/require_singleuser_auth.sh

@@ -1,0 +1,1 @@
+../../generic/package_mcstrans_removed.sh

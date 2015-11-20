@@ -1,0 +1,1 @@
+../../generic/uninstall_telnet_server.sh

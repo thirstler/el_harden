@@ -1,0 +1,1 @@
+../../generic/uninstall_vsftpd.sh

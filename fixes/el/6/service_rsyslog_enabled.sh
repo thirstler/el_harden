@@ -1,0 +1,1 @@
+../../generic/service_rsyslog_enabled.sh

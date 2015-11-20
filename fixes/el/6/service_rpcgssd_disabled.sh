@@ -1,0 +1,1 @@
+../../generic/service_rpcgssd_disabled.sh
