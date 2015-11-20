@@ -1,4 +1,4 @@
-#SSA SecFix Version 1
+# SecFix Version 1
 
 What does this do?
 
