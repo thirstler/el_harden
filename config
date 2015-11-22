@@ -65,7 +65,7 @@ SSHD_PERMIT_ROOT_LOGIN="no"
 
 ##
 # We need a time-source. C2S wants two sources for some reason.
-NTP1_SOURCE="time.ssa.gov"
+NTP1_SOURCE="2.fedora.pool.ntp.org"
 
 ##
 # Wait of n days required for password change

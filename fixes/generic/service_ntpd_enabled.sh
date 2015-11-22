@@ -1,6 +1,10 @@
 #!/bin/bash
 # SID: CCE-27093-4
 
+##
+# Make sure it's installed
+yum -y install ntp &> /dev/null
+
 #
 # Enable ntpd for all run levels
 #

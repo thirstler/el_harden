@@ -7,6 +7,12 @@ target system in the hope of making it comply with site policy or one of the
 usual standard benchmarks. Currently it implements rules for the USGCB and the
 C2S benchmarks (C2S being roughly a clone of the CIS benchmark).
 
+You may want to stop by here for a more complete set of hardening scripts:
+
+https://github.com/fcaviggia/hardening-script-el6
+
+I just find these easier to work with.
+
 Current state:
 
 Only works for RHEL6
