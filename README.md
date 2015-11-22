@@ -59,35 +59,35 @@ Prerequisites:
 
 Instructions:
 
-1) First, edit the script and change the administrative user password hash to 
+ - First, edit the script and change the administrative user password hash to 
    something other than the default (b3292f). Use "grub-crypt --sha-512" to
    create a hash.
-2) Select a UID for the administrative user that this script will add. That or
+ - Select a UID for the administrative user that this script will add. That or
    disable the creation of an admin user20 (in which case step #1 is irrelevant
    as well). If the default is fine then fine.
-3) Review the remaining configuration options. The defaults are derived from
+ - Review the remaining configuration options. The defaults are derived from
    whatever the benchmarks want but there may be some cases where they conflict
    or are not strong enough for your tastes. Keep the defaults and change them
    if they miss your target benchmark.
-4) Look in "functions" at the rule lists. You may want to exclude rules that
+ - Look in "functions" at the rule lists. You may want to exclude rules that
    will break things for your site. I'd create a new rule called CUSTOM and 
    give it the list of rules you do want and leave the defaults for the others
    alone.
-5) Select a benchmark to target. Currently there is $USGCB, $C2S and $CUSTOM if
+ - Select a benchmark to target. Currently there is $USGCB, $C2S and $CUSTOM if
    you created it. You'll select the benchmark by assigning it to $CHECKUS.
    E.g:
    
    CHECKUS=$USGCB
    
-6) Change directory to be in there with "run.sh" and run it:
+ - Change directory to be in there with "run.sh" and run it:
 
    ./run.sh
    
    You'll get a nasty warning. Be sure you're ok with this.
    
-7) After running you may decide you want to actually know the root password.
+ - After running you may decide you want to actually know the root password.
    change it if you must.
-8) Reboot the system a rerun an SCAP audit. This script won't change the state
+ - Reboot the system a rerun an SCAP audit. This script won't change the state
    of active mount points so you'll get dinged on those until a reboot.
-9) Remove the created admin account (if you elected to add it) after you get
+ - Remove the created admin account (if you elected to add it) after you get
    your users and/or whatever IDM solution in place.   
