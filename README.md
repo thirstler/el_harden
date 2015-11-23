@@ -57,40 +57,33 @@ Prerequisites:
    it may fail.
  - Be root on the system.
  - Script assumes no mount-points are NFS mounted. While it won't fail if any
-   file systems are NFS, it may take a long time to finish. I try and fix this
-   later.
+   file systems are NFS, it may take a long time to finish. I'll try and fix
+   this later.
 
 Instructions:
-
- - First, edit the config and change the administrative user password hash to
-   something other than the default (b3292f). Use "grub-crypt --sha-512" to
-   create a hash. Or you may prefer to use the following python:
+ - First, edit the "config" file and change the administrative user password
+   hash to something other than the default (b3292f). Use the following python
+   snippet to generate a password hash:
 
      python -c "import crypt; print crypt.crypt('my password')"
 
- - Select a UID for the administrative user that this script will add. That or
-   disable the creation of an admin user (in which case step #1 is irrelevant
-   as well). If the default is fine then fine.
+ - Select a username/UID for the administrative user that this script will add
+   if the defaults are no good for you. That or disable the creation of an admin
+   user (in which case step #1 is irrelevant as well).
+ - While you're in the configuration file, please select a remediation profile
+   by sourcing it. This distributes with the C2S profile seleted by default.
+   You will eventually graduate to creating a new profile pursuant to your
+   site's own set of exceptions or additions.
  - Review the remaining configuration options. The defaults are derived from
    whatever the benchmarks want but there may be some cases where they conflict
    or are not strong enough for your tastes. Keep the defaults and change them
    if they miss your target benchmark.
- - Look in "functions" at the rule lists. You may want to exclude rules that
-   will break things for your site. I'd create a new rule called CUSTOM and 
-   give it the list of rules you do want and leave the defaults for the others
-   alone.
- - Select a benchmark to target. Currently there is $USGCB, $C2S and $CUSTOM if
-   you created it. You'll select the benchmark by assigning it to $CHECKUS.
-   E.g:
-   
-   CHECKUS=$USGCB
-   
  - Change directory to be in there with "run.sh" and run it:
 
    ./run.sh
-   
+
    You'll get a nasty warning. Be sure you're ok with this.
-   
+
  - After running you may decide you want to actually know the root password.
    change it if you must.
  - Reboot the system and rerun an SCAP audit. This script won't change the state

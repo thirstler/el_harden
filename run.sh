@@ -1,26 +1,24 @@
 #!/bin/bash
-###############################################################################
+################################################################################
 # Name: main.sh
 # Desc: Entry point for secfix scripts. These scripts will configure a server
 #       to conform to the requirements specified in the provided list of
 #       rules. Distributed rule lists are USGCB and C2S (a CIS clone aped by
 #       the SCAP Security Guide folks). See README for more information.
-# Date: 2015-11-08
+# Date: 2015-11-23
 # Author: Jason Russler <jason.russler@gmail.com>
 #       Includes remediation content derived from the Fedora SSG @2015-11-20
-###############################################################################
+################################################################################
 
-##
-# See the config file for, you know, configuration.
+################################################################################
+#
+# You should not need to edit this file. See README.md for more information. Or
+# just go to "config" and follow it around.
+#
+################################################################################
 . ./config
+################################################################################
 
-##
-# Set our profile, overrides anything specified in config
-. ./profiles/C2S.profile
-
-###############################################################################
-# Run it
-###############################################################################
 
 ##
 # Sanity checks

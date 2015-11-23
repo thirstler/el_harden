@@ -1,38 +1,49 @@
+################################################################################
+# Remediation profile configuration for the Fedora SSG USGCB profile
+
+##
+# We need a time-source.
+NTP1_SOURCE="2.fedora.pool.ntp.org"
+
+##
+# Please give logs a home. This is NOT SSL protected by default
+TARGET_LOG_HOST="127.0.0.1"
+
 ##
 # Wait of n days required for password change
-export MINIMUM_AGE_LOGIN_DEFS="7"
+MINIMUM_AGE_LOGIN_DEFS="7"
 
 ##
 # Retain system logs for n weeks:
-export LOG_RETENTION_WEEKS="12"
+LOG_RETENTION_WEEKS="12"
 
 ##
 # Root permit ssh (one of "no" or "without-password"). Strict  "no" required
 # for various policies but use of a strongly protected ssh-key is secure in
 # most cases.
-export SSHD_PERMIT_ROOT_LOGIN="no"
+SSHD_PERMIT_ROOT_LOGIN="no"
 
 ##
 # Password age warning
-export PASSWORD_WARN_AGE_LOGIN_DEFS=14
+PASSWORD_WARN_AGE_LOGIN_DEFS=14
 
 ##
 # Account expiration
-export DISABLE_POST_PW_EXPIRATION=30
+DISABLE_POST_PW_EXPIRATION=30
 
 ##
 # Cracklib settings
-export CRACKLIB_PASSWORD_RETRIES="3"
-export CRACKLIB_PASSWORD_DCREDIT="-1"
-export CRACKLIB_PASSWORD_UCREDIT="-1"
-export CRACKLIB_PASSWORD_OCREDIT="-1"
-export CRACKLIB_PASSWORD_LCREDIT="-1"
-export CRACKLIB_PASSWORD_DIFOK="3"
-export CRACKLIB_PASSWORD_MINLEN="14"
+CRACKLIB_PASSWORD_RETRIES="3"
+CRACKLIB_PASSWORD_DCREDIT="-1"
+CRACKLIB_PASSWORD_UCREDIT="-1"
+CRACKLIB_PASSWORD_OCREDIT="-1"
+CRACKLIB_PASSWORD_LCREDIT="-1"
+CRACKLIB_PASSWORD_DIFOK="3"
+CRACKLIB_PASSWORD_MINLEN="14"
 
 ##
 # Faillock, deny after n tries
-export PAM_FAILLOCK_DENY="3"
+PAM_FAILLOCK_DENY="3"
 
 ##
 # Fedora SSG SCAP profile this rule list should be associated with
@@ -40,7 +51,7 @@ RUN_SCAP_PROFILE="usgcb-rhel6-server" # a valid profile name
 
 ##
 # United States Government Configuration Baseline. SCAP rules for that.
-export RULE_LIST="ensure_redhat_gpgkey_installed \
+RULE_LIST="ensure_redhat_gpgkey_installed \
 security_patches_up_to_date \
 package_aide_installed \
 mount_option_nodev_nonroot_local_partitions \
@@ -211,4 +222,6 @@ require_smb_client_signing \
 disable_squid \
 uninstall_squid \
 disable_snmpd"
+
+export NTP1_SOURCE TARGET_LOG_HOST MINIMUM_AGE_LOGIN_DEFS LOG_RETENTION_WEEKS SSHD_PERMIT_ROOT_LOGIN PASSWORD_WARN_AGE_LOGIN_DEFS DISABLE_POST_PW_EXPIRATION CRACKLIB_PASSWORD_RETRIES CRACKLIB_PASSWORD_DCREDIT CRACKLIB_PASSWORD_UCREDIT CRACKLIB_PASSWORD_OCREDIT CRACKLIB_PASSWORD_LCREDIT CRACKLIB_PASSWORD_DIFOK CRACKLIB_PASSWORD_MINLEN PAM_FAILLOCK_DENY RUN_SCAP_PROFILE RULE_LIST
 

@@ -5,34 +5,29 @@
 # differ between selected profiles.
 
 ##
-# !!!!!!!!! CHANGE ME !!!!!!!!!!! 
-# Set admin password hash. This file is distributed with 'b3292f'
-# on RHEL 6/7 use something like this to generate a hash:
-#   python -c "import crypt; print crypt.crypt('b3292f')"
-ADMIN_PASSWD='$6$HfSGwyknzFTB0jZX$N/alRNJxBbMIPJiSo89YYmDOh2ssJDdlcw/hsHqIFNg/rQNQEmPk053PoccKKZ9QiFi/VDWMhOP9ERxQiz35v0'
-
-##
-# Bootloader password hash 
-# !!!!!!!!! CHANGE ME !!!!!!!!!!!
-# Set to the admin hash by default.
-BOOTLOADER_PASSWORD=${ADMIN_PASSWD}
-
-##
-# Administrative user that will be added to the system with sudo privs.
-# Remove this user when identity solution is installed. Leave blank to elect
-# not to add a temporary admin user.
+# Script adds an administrative user by default.
+# Change username and/or UID here.
 ADMIN_USER=secfix_admin
 ADMIN_UID=52768
 
 ##
-# Run SCAP audit after applying security configuation?
-RUN_SCAP_AUDIT="y"                    # "y" to run audit
-
-
+# !!!!!!!!! CHANGE ME !!!!!!!!!!!
+# Set password hash for the above mentioned administrative user. This file is
+# distributed with password: 'b3292f' (without quotes).  On RHEL 6/7 use
+# something like this to generate a hash:
+#   python -c "import crypt; print crypt.crypt('b3292f')"
+ADMIN_PASSWD='$6$HfSGwyknzFTB0jZX$N/alRNJxBbMIPJiSo89YYmDOh2ssJDdlcw/hsHqIFNg/rQNQEmPk053PoccKKZ9QiFi/VDWMhOP9ERxQiz35v0'
 
 ##
-# Please give logs a home. This is NOT SSL protected by default
-TARGET_LOG_HOST="127.0.0.1"
+# Bootloader password hash
+# !!!!!!!!! CHANGE ME !!!!!!!!!!!
+# Set to the admin user hash by default.
+BOOTLOADER_PASSWORD=${ADMIN_PASSWD}
+
+##
+# Run SCAP audit after applying security configuation? (RUN_SCAP_PROFILE needs
+# to be set to a valid fedora SSG profile name in the selected profile).
+RUN_SCAP_AUDIT="y"
 
 ##
 # Set to anything but "y" to skip writing a default (permissive) iptables
@@ -40,12 +35,12 @@ TARGET_LOG_HOST="127.0.0.1"
 WRITE_DEFAULT_FIREWALL="y"
 
 ##
-# We need a time-source. C2S wants two sources for some reason.
-NTP1_SOURCE="2.fedora.pool.ntp.org"
-
-##
 # Get whatever's in functions
 . ./functions
+
+##
+# Choose a  remediation profile
+. ./profiles/C2S-el6.profile
 
 # END CONFIGURATION
 ###############################################################################
