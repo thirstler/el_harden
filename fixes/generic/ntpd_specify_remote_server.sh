@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27098-3
 
+{
 : ${NTP1_SOURCE:="time.ssa.gov"}
 : ${NTP2_SOURCE:="0.rhel.pool.ntp.org iburst"}
 
@@ -19,3 +20,5 @@ keys /etc/ntp/keys
 server ${NTP1_SOURCE}
 server ${NTP2_SOURCE}
 EOF
+} &>> ${RUNROOT}/run.log
+

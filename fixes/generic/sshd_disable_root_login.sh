@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27100-7
 
+{
 : ${SSHD_PERMIT_ROOT_LOGIN:="no"}
 
 SSHD_CONFIG='/etc/ssh/sshd_config'
@@ -57,3 +58,5 @@ else
          sed -i "$FIRST_MATCH_BLOCK s/^\([[:space:]]*Match[^\n]*\)/PermitRootLogin ${SSHD_PERMIT_ROOT_LOGIN}\n\1/I" $SSHD_CONFIG
     fi
 fi
+} &>> ${RUNROOT}/run.log
+

@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27166-8
 
+{
 #
 # Set runtime for net.ipv6.conf.default.accept_redirects
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set net.ipv6.conf.default.accept_redirects to 0 per security requirements" >> /etc/sysctl.conf
 	echo "net.ipv6.conf.default.accept_redirects = 0" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

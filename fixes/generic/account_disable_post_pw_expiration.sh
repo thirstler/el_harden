@@ -10,6 +10,6 @@ grep -q ^INACTIVE /etc/default/useradd && \
 if ! [ $? -eq 0 ]; then
     echo "INACTIVE=$var_account_disable_post_pw_expiration" >> /etc/default/useradd
 fi
-
+echo "testing"
 } &>> ${RUNROOT}/run.log
 

@@ -1,4 +1,6 @@
 #!/bin/bash
 # SID:
 
-yum -q -y erase setroubleshoot &> /dev/null
+{
+yum -q -y erase setroubleshoot
+} &>> ${RUNROOT}/run.log

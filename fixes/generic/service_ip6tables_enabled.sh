@@ -1,11 +1,15 @@
 #!/bin/bash
 
+{
 #
 # Enable ip6tables for all run levels
 #
-/sbin/chkconfig --level 0123456 ip6tables on &> /dev/null
+/sbin/chkconfig --level 0123456 ip6tables on
 
 #
 # Start ip6tables if not currently running
 #
-/sbin/service ip6tables start &> /dev/null
+/sbin/service ip6tables start
+
+} &>> ${RUNROOT}/run.log
+

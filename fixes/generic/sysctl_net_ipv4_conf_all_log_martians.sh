@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27066-0
 
+{
 #
 # Set runtime for net.ipv4.conf.all.log_martians
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set net.ipv4.conf.all.log_martians to 1 per security requirements" >> /etc/sysctl.conf
 	echo "net.ipv4.conf.all.log_martians = 1" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

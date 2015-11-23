@@ -6,6 +6,7 @@
 #luke.brisk@boeing.com or luke.brisk@gmail.com
 ######################################################################
 
+{
 if [ -f /etc/samba/smb.conf ]; then
 
 CLIENTSIGNING=$( grep -i 'client signing' /etc/samba/smb.conf | wc -l )
@@ -18,4 +19,5 @@ else
 fi
 
 fi
+} &>> ${RUNROOT}/run.log
 

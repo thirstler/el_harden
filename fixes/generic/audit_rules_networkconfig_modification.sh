@@ -1,7 +1,7 @@
 #!/bin/bash
 # SID: CCE-26648-6
 
-
+{
 # Include source function library.
 . /usr/share/scap-security-guide/functions
 
@@ -23,3 +23,5 @@ fix_audit_watch_rule "/etc/issue" "wa" "audit_rules_networkconfig_modification"
 fix_audit_watch_rule "/etc/issue.net" "wa" "audit_rules_networkconfig_modification"
 fix_audit_watch_rule "/etc/hosts" "wa" "audit_rules_networkconfig_modification"
 fix_audit_watch_rule "/etc/sysconfig/network" "wa" "audit_rules_networkconfig_modification"
+} &>> ${RUNROOT}/run.log
+

@@ -11,7 +11,10 @@ You may want to stop by here for a more complete set of hardening scripts:
 
 https://github.com/fcaviggia/hardening-script-el6
 
-I just find these easier to work with.
+I just find these easier to work with since they're taylored for use with the
+Fedora SCAP Security Guide (SSG). This tool uses the SSG naming convention for
+rules a remediations. This makes things easier when eyeballing SSG reports and
+tracking down the appropriate remediation script.
 
 Current state:
 
@@ -59,7 +62,7 @@ Prerequisites:
 
 Instructions:
 
- - First, edit the script and change the administrative user password hash to 
+ - First, edit the config and change the administrative user password hash to
    something other than the default (b3292f). Use "grub-crypt --sha-512" to
    create a hash. Or you may prefer to use the following python:
 

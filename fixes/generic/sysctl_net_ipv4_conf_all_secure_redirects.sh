@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: 
 
+{
 #
 # Set runtime for net.ipv4.conf.all.secure_redirects
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set net.ipv4.conf.all.secure_redirects to 0 per security requirements" >> /etc/sysctl.conf
 	echo "net.ipv4.conf.all.secure_redirects = 0" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

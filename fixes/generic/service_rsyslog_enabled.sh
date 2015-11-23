@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID:
 
+{
 #
 # Enable rsyslog for all run levels
 #
@@ -47,4 +48,7 @@ EOF
 #
 # Start rsyslog if not currently running
 #
-/sbin/service rsyslog start &> /dev/null
+/sbin/service rsyslog start
+
+} &>> ${RUNROOT}/run.log
+

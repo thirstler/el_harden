@@ -1,13 +1,16 @@
 #!/bin/bash
 # SID: CCE-26638-7
 
+{
 # Install GConf2 package if not installed
-if ! rpm -q GConf2 &> /dev/null; then
-  yum -y install GConf2 &> /dev/null
+if ! rpm -q GConf2; then
+  yum -y install GConf2
 fi
 
 # Set the screensaver mode in the GNOME desktop to a blank screen
 gconftool-2 --direct \
             --config-source "xml:readwrite:/etc/gconf/gconf.xml.mandatory" \
             --type string \
-            --set /apps/gnome-screensaver/mode blank-only &> /dev/null
+            --set /apps/gnome-screensaver/mode blank-only
+} &>> ${RUNROOT}/run.log
+

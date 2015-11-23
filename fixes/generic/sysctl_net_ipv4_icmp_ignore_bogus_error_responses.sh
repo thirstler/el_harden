@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26993-6
 
+{
 #
 # Set runtime for net.ipv4.icmp_ignore_bogus_error_responses
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set net.ipv4.icmp_ignore_bogus_error_responses to 1 per security requirements" >> /etc/sysctl.conf
 	echo "net.ipv4.icmp_ignore_bogus_error_responses = 1" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

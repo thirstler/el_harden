@@ -55,12 +55,10 @@ cat << EOF
                                ### WARNING ###
                               
 You're about to run a security "fixing" tool on this system. It sort of sticks
-your server in a salad-spinner of existential ruin. Make sure you know what
-you're doing.
+your server in a salad-spinner of existential ruin. Make sure that's ok.
 
-Note that a lot of script output is suppressed here so use the generated SCAP
-report to see what worked and what didn't. I'll work on sensible error reports
-ASAP.
+See ./run.log for info and errors and other stuff. This script will only echo
+good things.
 
 EOF
 

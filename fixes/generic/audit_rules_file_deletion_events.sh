@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26651-0
 
+{
 # Include source function library.
 . /usr/share/scap-security-guide/functions
 
@@ -10,9 +11,11 @@
 
 for ARCH in ${RULE_ARCHS[@]}
 do
-	PATTERN="-a always,exit -F arch=$ARCH -S .* -F auid>=500 -F auid!=4294967295 -k delete"
-	# Use escaped BRE regex to specify rule group
-	GROUP="\(rmdir\|unlink\|rename\)"
-	FULL_RULE="-a always,exit -F arch=$ARCH -S rmdir -S unlink -S unlinkat -S rename -S renameat -F auid>=500 -F auid!=4294967295 -k delete"
-	fix_audit_syscall_rule "$PATTERN" "$GROUP" "$ARCH" "$FULL_RULE"
+    PATTERN="-a always,exit -F arch=$ARCH -S .* -F auid>=500 -F auid!=4294967295 -k delete"
+    # Use escaped BRE regex to specify rule group
+    GROUP="\(rmdir\|unlink\|rename\)"
+    FULL_RULE="-a always,exit -F arch=$ARCH -S rmdir -S unlink -S unlinkat -S rename -S renameat -F auid>=500 -F auid!=4294967295 -k delete"
+    fix_audit_syscall_rule "$PATTERN" "$GROUP" "$ARCH" "$FULL_RULE"
 done
+} &>> ${RUNROOT}/run.log
+

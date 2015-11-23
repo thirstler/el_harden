@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27007-4
 
+{
 #
 # Set runtime for kernel.exec-shield
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set kernel.exec-shield to 1 per security requirements" >> /etc/sysctl.conf
 	echo "kernel.exec-shield = 1" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26457-2
 
+{
 readonly AUDIT_RULES='/etc/audit/audit.rules'
 
 # Obtain the list of SUID/SGID binaries on the particular system into
@@ -97,3 +98,5 @@ do
     fi
 
 done
+} &>> ${RUNROOT}/run.log
+

@@ -1,4 +1,7 @@
 #!/bin/bash
 # SID: 
 
-yum -q -y erase ypbind &> /dev/null
+{
+yum -q -y erase ypbind
+} &>> ${RUNROOT}/run.log
+

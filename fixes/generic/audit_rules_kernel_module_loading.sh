@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26611-4
 
+{
 # Include source function library.
 . /usr/share/scap-security-guide/functions
 
@@ -25,3 +26,5 @@ done
 fix_audit_watch_rule "/sbin/insmod" "x" "modules"
 fix_audit_watch_rule "/sbin/rmmod" "x" "modules"
 fix_audit_watch_rule "/sbin/modprobe" "x" "modules"
+} &>> ${RUNROOT}/run.log
+

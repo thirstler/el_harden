@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27044-7
 
+{
 #
 # Set runtime for fs.suid_dumpable
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set fs.suid_dumpable to 0 per security requirements" >> /etc/sysctl.conf
 	echo "fs.suid_dumpable = 0" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

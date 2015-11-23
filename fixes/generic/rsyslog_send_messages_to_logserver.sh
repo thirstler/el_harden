@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26801-1
 
+{
 ##
 # syslog config with configured destination log host
 [ -f /etc/rsyslog.conf.secfixbak ] || cp /etc/rsyslog.conf /etc/rsyslog.conf.secfixbak
@@ -37,3 +38,5 @@ local7.*                                                /var/log/boot.log
 $template SpiceTmpl,"%TIMESTAMP%.%TIMESTAMP:::date-subseconds% %syslogtag% %syslogseverity-text%:%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n"
 :programname, startswith, "spice-vdagent"       /var/log/spice-vdagent.log;SpiceTmpl
 EOF
+} &>> ${RUNROOT}/run.log
+

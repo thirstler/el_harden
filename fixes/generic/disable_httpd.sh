@@ -1,5 +1,9 @@
 #!/bin/bash
 # SID: CCE-27075-1
 
-chkconfig httpd off &> /dev/null
-service httpd stop &> /dev/null
+# Why is this a 2-fer?
+{
+chkconfig httpd off
+service httpd stop
+} &>> ${RUNROOT}/run.log
+

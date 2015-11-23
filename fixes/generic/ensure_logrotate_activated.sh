@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27014-0
 
+{
 : ${LOG_RETENTION_WEEKS:="12"}
 
 ##
@@ -27,3 +28,5 @@ include /etc/logrotate.d
     rotate 1
 }
 EOF
+} &>> ${RUNROOT}/run.log
+

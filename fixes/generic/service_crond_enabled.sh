@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27070-2
 
+{
 #
 # Enable crond for all run levels
 #
@@ -10,3 +11,6 @@
 # Start crond if not currently running
 #
 /sbin/service crond start
+
+} &>> ${RUNROOT}/run.log
+

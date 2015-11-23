@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26242-8
 
+{
 # audit.rules file to operate at
 AUDIT_RULES_FILE="/etc/audit/audit.rules"
 
@@ -116,3 +117,5 @@ do
     echo ${EXPECTED_RULE} >> ${AUDIT_RULES_FILE}
   fi
 done
+} &>> ${RUNROOT}/run.log
+

@@ -1,5 +1,9 @@
 #!/bin/bash
 # SID: CCE-26873-0
 
-service named stop &> /dev/null
-chkconfig named off  &> /dev/null
+# Why is this a 2-fer?
+{
+service named stop
+chkconfig named off
+} &>> ${RUNROOT}/run.log
+

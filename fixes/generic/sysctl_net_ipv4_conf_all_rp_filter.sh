@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26979-5
 
+{
 #
 # Set runtime for net.ipv4.conf.all.rp_filter
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set net.ipv4.conf.all.rp_filter to 1 per security requirements" >> /etc/sysctl.conf
 	echo "net.ipv4.conf.all.rp_filter = 1" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

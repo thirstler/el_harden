@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26999-3
 
+{
 #
 # Set runtime for kernel.randomize_va_space
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set kernel.randomize_va_space to 2 per security requirements" >> /etc/sysctl.conf
 	echo "kernel.randomize_va_space = 2" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

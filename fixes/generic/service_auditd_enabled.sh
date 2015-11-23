@@ -1,12 +1,15 @@
 #!/bin/bash
 # SID: CCE-27058-7
 
+{
 #
 # Enable auditd for all run levels
 #
-/sbin/chkconfig --level 0123456 auditd on &> /dev/null
+/sbin/chkconfig --level 0123456 auditd on
 
 #
 # Start auditd if not currently running
 #
-/sbin/service auditd start &> /dev/null
+/sbin/service auditd start
+} &>> ${RUNROOT}/run.log
+

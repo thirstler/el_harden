@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27027-2
 
+{
 #
 # Set runtime for net.ipv4.conf.all.accept_redirects
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set net.ipv4.conf.all.accept_redirects to 0 per security requirements" >> /etc/sysctl.conf
 	echo "net.ipv4.conf.all.accept_redirects = 0" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

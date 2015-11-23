@@ -1,6 +1,8 @@
 #!/bin/bash
 # SID: CCE-27120-5
 
+{
 if rpm -qa | grep -q dhcp; then
-    yum -y erase dhcp &> /dev/null || echo -n "(error) "
+    yum -y erase dhcp
 fi
+} &>> ${RUNROOT}/run.log

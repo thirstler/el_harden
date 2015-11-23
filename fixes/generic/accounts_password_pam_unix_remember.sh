@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26741-9
 
+{
 : ${PAM_UNIX_REMEMBER:="24"}
 var_password_pam_unix_remember="24"
 if grep -q "remember=" /etc/pam.d/system-auth; then   
@@ -8,3 +9,6 @@ if grep -q "remember=" /etc/pam.d/system-auth; then
 else
     sed -i --follow-symlink "/^password[[:space:]]\+sufficient[[:space:]]\+pam_unix.so/ s/$/ remember=${PAM_UNIX_REMEMBER}/" /etc/pam.d/system-auth
 fi
+
+} &>> ${RUNROOT}/run.log
+

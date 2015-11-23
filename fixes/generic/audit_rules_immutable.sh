@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26612-2
 
+{
 readonly AUDIT_RULES='/etc/audit/audit.rules'
 
 # If '-e .*' setting present in audit.rules already, delete it since the
@@ -12,3 +13,5 @@ echo '' >> $AUDIT_RULES
 echo '# Set the audit.rules configuration immutable per security requirements' >> $AUDIT_RULES
 echo '# Reboot is required to change audit rules once this setting is applied' >> $AUDIT_RULES
 echo '-e 2' >> $AUDIT_RULES
+} &>> ${RUNROOT}/run.log
+

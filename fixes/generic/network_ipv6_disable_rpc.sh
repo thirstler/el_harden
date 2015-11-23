@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27232-8
 
+{
 ##
 # Install
 yum -y install libtirpc &> /dev/null
@@ -13,3 +14,5 @@ for rpc_entry in ${IPV6_RPC_ENTRIES[@]}
 do
 	sed -i "/^$rpc_entry[[:space:]]\+tpi\_.*inet6.*/d" /etc/netconfig
 done
+} &>> ${RUNROOT}/run.log
+

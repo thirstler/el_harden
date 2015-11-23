@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-26712-0
 
+{
 # Include source function library.
 . /usr/share/scap-security-guide/functions
 
@@ -25,3 +26,5 @@ do
 	fix_audit_syscall_rule "$PATTERN" "$GROUP" "$ARCH" "$FULL_RULE"
 
 done
+} &>> ${RUNROOT}/run.log
+

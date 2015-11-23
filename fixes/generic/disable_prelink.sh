@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27221-1
 
+{
 #
 # Disable prelinking altogether
 #
@@ -15,4 +16,6 @@ fi
 #
 # Undo previous prelink changes to binaries
 #
-/usr/sbin/prelink -ua &> /dev/null
+/usr/sbin/prelink -ua
+} &>> ${RUNROOT}/run.log
+

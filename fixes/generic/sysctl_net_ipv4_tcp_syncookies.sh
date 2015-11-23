@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27053-8
 
+{
 #
 # Set runtime for net.ipv4.tcp_syncookies
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set net.ipv4.tcp_syncookies to 1 per security requirements" >> /etc/sysctl.conf
 	echo "net.ipv4.tcp_syncookies = 1" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

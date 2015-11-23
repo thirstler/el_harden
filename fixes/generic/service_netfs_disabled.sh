@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27137-9
 
+{
 #
 # Disable netfs for all run levels
 #
@@ -10,3 +11,6 @@
 # Stop netfs if currently running
 #
 /sbin/service netfs stop
+
+} &>> ${RUNROOT}/run.log
+

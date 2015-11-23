@@ -1,4 +1,7 @@
 #!/bin/bash
 # SID: 
 
-yum -q -y erase mcstrans &> /dev/null
+{
+yum -q -y erase mcstrans
+} &>> ${RUNROOT}/run.log
+

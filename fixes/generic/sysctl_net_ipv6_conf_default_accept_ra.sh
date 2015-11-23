@@ -1,6 +1,7 @@
 #!/bin/bash
 # SID: CCE-27164-3
 
+{
 #
 # Set runtime for net.ipv6.conf.default.accept_ra
 #
@@ -17,3 +18,6 @@ else
 	echo "# Set net.ipv6.conf.default.accept_ra to 0 per security requirements" >> /etc/sysctl.conf
 	echo "net.ipv6.conf.default.accept_ra = 0" >> /etc/sysctl.conf
 fi
+
+} &>> ${RUNROOT}/run.log
+

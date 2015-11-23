@@ -1,7 +1,8 @@
 #!/bin/bash
 # SID: aide_build_database
 
-rpm -qi aide &> /dev/null || yum -y -q install aide
+{
+rpm -qi aide || yum -y -q install aide
 
 # Set up the custom AIDE rules
 if ! grep -q '# Local additions' /etc/aide.conf; then
@@ -35,7 +36,9 @@ fi
 # Set up AIDE
 if [ ! -f /var/lib/aide/aide.db.gz ]; then
     echo -n "initializing AIDE database..."
-    aide --init &> /dev/null
+    aide --init
     mv /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
     echo "...done."
 fi
+} &>> ${RUNROOT}/run.log
+
