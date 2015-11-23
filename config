@@ -19,7 +19,7 @@ BOOTLOADER_PASSWORD=${ADMIN_PASSWD}
 # Remove this user when identity solution is installed. Leave blank to elect
 # not to add a temporary admin user.
 ADMIN_USER=secfix_admin
-ADMIN_UID=32768
+ADMIN_UID=52768
 
 ##
 # Run SCAP audit after applying security configuation?
@@ -53,7 +53,7 @@ PAM_FAILLOCK_DENY="3"
 TARGET_LOG_HOST="127.0.0.1"
 
 ##
-# Set to anything but "1" to skip writing a default (permissive) iptables
+# Set to anything but "y" to skip writing a default (permissive) iptables
 # configfile file.
 WRITE_DEFAULT_FIREWALL="y"
 

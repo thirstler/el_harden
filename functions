@@ -60,7 +60,7 @@ EOF
 
 
 ##
-# The CIS bencmark renamed C2S for leagal reasons. Did I say CIS? No, I didn't.
+# C2S benchmark aped from the CIS bench.
 C2S="ensure_redhat_gpgkey_installed \
 package_aide_installed \
 disable_prelink \

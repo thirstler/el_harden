@@ -61,9 +61,12 @@ Instructions:
 
  - First, edit the script and change the administrative user password hash to 
    something other than the default (b3292f). Use "grub-crypt --sha-512" to
-   create a hash.
+   create a hash. Or you may prefer to use the following python:
+
+     python -c "import crypt; print crypt.crypt('my password')"
+
  - Select a UID for the administrative user that this script will add. That or
-   disable the creation of an admin user20 (in which case step #1 is irrelevant
+   disable the creation of an admin user (in which case step #1 is irrelevant
    as well). If the default is fine then fine.
  - Review the remaining configuration options. The defaults are derived from
    whatever the benchmarks want but there may be some cases where they conflict
@@ -87,7 +90,8 @@ Instructions:
    
  - After running you may decide you want to actually know the root password.
    change it if you must.
- - Reboot the system a rerun an SCAP audit. This script won't change the state
+ - Reboot the system and rerun an SCAP audit. This script won't change the state
    of active mount points so you'll get dinged on those until a reboot.
  - Remove the created admin account (if you elected to add it) after you get
-   your users and/or whatever IDM solution in place.   
+   your users and/or whatever IDM solution in place.
+     

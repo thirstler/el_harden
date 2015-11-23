@@ -25,6 +25,7 @@ if [ ! -d ./fixes ]; then
     echo "where the hell are we? exiting."
     exit 1
 fi
+export RUNROOT=$(pwd)
 
 if [[ "$(id -u)" != "0" ]]; then
     echo "you no root???"
