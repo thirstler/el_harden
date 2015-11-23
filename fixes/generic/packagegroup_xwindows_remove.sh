@@ -2,6 +2,6 @@
 # SID:
 
 {
-sudo -q -y yum groupremove "X Window System"
+yum groupremove "X Window System"
 } &>> ${RUNROOT}/run.log
 

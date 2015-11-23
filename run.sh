@@ -7,13 +7,16 @@
 #       the SCAP Security Guide folks). See README for more information.
 # Date: 2015-11-08
 # Author: Jason Russler <jason.russler@gmail.com>
-#       Includes remediation content derived from the Fedora SSG.
+#       Includes remediation content derived from the Fedora SSG @2015-11-20
 ###############################################################################
 
 ##
 # See the config file for, you know, configuration.
 . ./config
 
+##
+# Set our profile, overrides anything specified in config
+. ./profiles/C2S.profile
 
 ###############################################################################
 # Run it
@@ -42,7 +45,7 @@ echo ""
 
 ##
 # Check that everything's there. If not then we should probably stop.
-for chk in $CHECKUS; do
+for chk in $RULE_LIST; do
     if [ ! -f "./fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh" ]; then
         echo "rule file not found: $(pwd)/fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh"
         echo "quitting before we really break things"
@@ -137,7 +140,7 @@ fi
 :> ${RUNROOT}/run.log
 
 echo "do configuration changes..."
-for chk in $CHECKUS; do
+for chk in $RULE_LIST; do
     if [ ! -f "fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh" ]; then
         echo "WARNING: rule file not found: fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh"
     fi
