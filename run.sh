@@ -133,12 +133,16 @@ if ! rpm -q scap-security-guide &> /dev/null; then
     REMOVE_SCAP_SECURITY_GUIDE="y"
 fi
 
+# truncate the log
+:> ${RUNROOT}/run.log
+
 echo "do configuration changes..."
 for chk in $CHECKUS; do
     if [ ! -f "fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh" ]; then
         echo "WARNING: rule file not found: fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh"
     fi
     echo -n "running ${chk} ..."
+    echo "$(date) - ./fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh --" &>> ${RUNROOT}/run.log
     ./fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh
     echo "done"
 done

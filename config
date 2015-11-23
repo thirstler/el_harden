@@ -81,7 +81,7 @@ LOG_RETENTION_WEEKS="12"
 
 ##
 # Select the rule list you want (see "functions" for rule lists)
-CHECKUS=$USGCB
+CHECKUS=$C2S
 
 # END CONFIGURATION
 ###############################################################################
