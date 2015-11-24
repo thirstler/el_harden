@@ -3,5 +3,5 @@
 
 {
 echo "install squashfs /bin/false" > /etc/modprobe.d/squashfs.conf
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

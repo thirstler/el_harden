@@ -3,4 +3,4 @@
 
 {
 chkconfig dhcpd off
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}

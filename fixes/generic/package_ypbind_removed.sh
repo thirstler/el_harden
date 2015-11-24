@@ -3,5 +3,5 @@
 
 {
 yum -q -y erase ypbind
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

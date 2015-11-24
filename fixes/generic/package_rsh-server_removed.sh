@@ -3,5 +3,5 @@
 
 {
 yum -q -y erase rsh-server
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

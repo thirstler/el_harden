@@ -7,5 +7,5 @@ grep -q ^PermitUserEnvironment /etc/ssh/sshd_config && \
 if ! [ $? -eq 0 ]; then
     echo "PermitUserEnvironment no" >> /etc/ssh/sshd_config
 fi
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

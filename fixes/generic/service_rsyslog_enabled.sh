@@ -50,5 +50,5 @@ EOF
 #
 /sbin/service rsyslog start
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

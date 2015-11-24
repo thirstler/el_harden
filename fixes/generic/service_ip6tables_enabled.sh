@@ -11,5 +11,5 @@
 #
 /sbin/service ip6tables start
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

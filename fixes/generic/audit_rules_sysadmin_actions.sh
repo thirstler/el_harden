@@ -6,4 +6,4 @@
 . /usr/share/scap-security-guide/functions
 # Perform the remediation
 fix_audit_watch_rule "/etc/sudoers" "wa" "actions"
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}

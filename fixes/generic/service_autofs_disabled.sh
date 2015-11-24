@@ -10,5 +10,5 @@
 # Stop autofs if currently running
 #
 /sbin/service autofs stop
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

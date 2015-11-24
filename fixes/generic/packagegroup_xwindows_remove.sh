@@ -3,5 +3,5 @@
 
 {
 yum groupremove "X Window System"
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

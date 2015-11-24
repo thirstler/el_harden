@@ -12,5 +12,5 @@
 #
 /sbin/service rhnsd stop
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

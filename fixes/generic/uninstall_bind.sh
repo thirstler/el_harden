@@ -6,4 +6,4 @@ if rpm -qa | grep -q squid; then
     yum -y erase bind
 fi
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}

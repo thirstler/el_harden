@@ -12,5 +12,5 @@
 #
 /sbin/service iptables start
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

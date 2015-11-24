@@ -8,5 +8,5 @@ grep -q ^SELINUX= /etc/selinux/config && \
 if ! [ $? -eq 0 ]; then
     echo "SELINUX=$var_selinux_state" >> /etc/selinux/config
 fi
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

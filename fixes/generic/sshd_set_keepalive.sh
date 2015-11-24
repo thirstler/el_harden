@@ -7,5 +7,5 @@ grep -q ^ClientAliveCountMax /etc/ssh/sshd_config && \
 if ! [ $? -eq 0 ]; then
     echo "ClientAliveCountMax 0" >> /etc/ssh/sshd_config
 fi
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

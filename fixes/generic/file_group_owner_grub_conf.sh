@@ -3,5 +3,5 @@
 
 {
 chgrp root /boot/grub/grub.conf
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

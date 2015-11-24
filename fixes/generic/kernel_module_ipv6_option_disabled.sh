@@ -27,5 +27,5 @@ do
 		echo "$setting = 1" >> /etc/sysctl.conf
 	fi
 done
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

@@ -3,5 +3,5 @@
 
 {
 chmod 600 /boot/grub/grub.conf
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

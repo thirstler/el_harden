@@ -19,5 +19,5 @@ else
 	echo "net.ipv4.conf.all.accept_source_route = 0" >> /etc/sysctl.conf
 fi
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

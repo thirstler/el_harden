@@ -19,5 +19,5 @@ else
 fi
 
 fi
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

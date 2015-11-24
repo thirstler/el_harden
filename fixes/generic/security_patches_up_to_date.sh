@@ -4,5 +4,5 @@
 
 {
 yum -y update &> /dev/null || echo "failed to install security updates"
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

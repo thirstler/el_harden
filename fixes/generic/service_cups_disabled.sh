@@ -12,5 +12,5 @@
 #
 /sbin/service cups stop
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

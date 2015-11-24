@@ -26,5 +26,5 @@ done
 fix_audit_watch_rule "/sbin/insmod" "x" "modules"
 fix_audit_watch_rule "/sbin/rmmod" "x" "modules"
 fix_audit_watch_rule "/sbin/modprobe" "x" "modules"
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

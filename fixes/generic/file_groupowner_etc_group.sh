@@ -3,5 +3,5 @@
 
 {
 chgrp root /etc/group
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

@@ -3,4 +3,4 @@
 
 {
 chkconfig avahi-daemon off
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}

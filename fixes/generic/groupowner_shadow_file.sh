@@ -3,4 +3,4 @@
 
 {
 chgrp root /etc/shadow
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}

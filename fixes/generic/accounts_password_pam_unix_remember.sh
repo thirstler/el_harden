@@ -10,5 +10,5 @@ else
     sed -i --follow-symlink "/^password[[:space:]]\+sufficient[[:space:]]\+pam_unix.so/ s/$/ remember=${PAM_UNIX_REMEMBER}/" /etc/pam.d/system-auth
 fi
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

@@ -14,5 +14,5 @@ EOF
 
 printf "\n" >> /etc/issue
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

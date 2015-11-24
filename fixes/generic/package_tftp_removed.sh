@@ -3,4 +3,4 @@
 
 {
 yum -q -y erase tftp
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}

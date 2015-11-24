@@ -4,5 +4,5 @@
 {
 find -type f -name .rhosts -exec rm -f '{}' \;
 rm -f /etc/hosts.equiv &> /dev/null
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

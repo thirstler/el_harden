@@ -13,5 +13,5 @@ echo '' >> $AUDIT_RULES
 echo '# Set the audit.rules configuration immutable per security requirements' >> $AUDIT_RULES
 echo '# Reboot is required to change audit rules once this setting is applied' >> $AUDIT_RULES
 echo '-e 2' >> $AUDIT_RULES
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

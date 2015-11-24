@@ -19,5 +19,5 @@ else
 	echo "net.ipv4.conf.all.log_martians = 1" >> /etc/sysctl.conf
 fi
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

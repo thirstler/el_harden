@@ -6,5 +6,5 @@
 . functions
 
 add_mp_opt "/tmp" "noexec"
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

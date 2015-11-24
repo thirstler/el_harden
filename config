@@ -35,6 +35,11 @@ RUN_SCAP_AUDIT="y"
 WRITE_DEFAULT_FIREWALL="y"
 
 ##
+# What should the log file be named? This will be relative to the root of this
+# utility.
+LOGFILE=el_harden.log
+
+##
 # Get whatever's in functions
 . ./functions
 
@@ -45,5 +50,5 @@ WRITE_DEFAULT_FIREWALL="y"
 # END CONFIGURATION
 ###############################################################################
 
-export ADMIN_PASSWD BOOTLOADER_PASSWORD ADMIN_USER ADMIN_UID RUN_SCAP_AUDIT RUN_SCAP_PROFILE TARGET_LOG_HOST WRITE_DEFAULT_FIREWALL NTP1_SOURCE
+export LOGFILE ADMIN_PASSWD BOOTLOADER_PASSWORD ADMIN_USER ADMIN_UID RUN_SCAP_AUDIT RUN_SCAP_PROFILE TARGET_LOG_HOST WRITE_DEFAULT_FIREWALL NTP1_SOURCE
 

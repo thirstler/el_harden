@@ -3,4 +3,4 @@
 
 {
 chkconfig dovecot off
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}

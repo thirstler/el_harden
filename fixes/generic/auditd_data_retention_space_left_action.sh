@@ -16,5 +16,5 @@ else
         echo "# Set space_left_action to $var_auditd_space_left_action per security requirements" >> /etc/audit/auditd.conf
         echo "space_left_action = $var_auditd_space_left_action" >> /etc/audit/auditd.conf
 fi
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

@@ -16,4 +16,4 @@ do
 	FULL_RULE="-a always,exit -F arch=$ARCH -S mount -F auid>=500 -F auid!=4294967295 -k export"
 	fix_audit_syscall_rule "$PATTERN" "$GROUP" "$ARCH" "$FULL_RULE"
 done
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}

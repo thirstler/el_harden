@@ -3,5 +3,5 @@
 
 {
 yum -q -y install rsyslog
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

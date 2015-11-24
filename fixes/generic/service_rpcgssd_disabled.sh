@@ -12,5 +12,5 @@
 #
 /sbin/service rpcgssd stop
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

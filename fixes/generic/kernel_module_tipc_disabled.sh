@@ -3,5 +3,5 @@
 
 {
 echo "install tipc /bin/false" > /etc/modprobe.d/tipc.conf
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

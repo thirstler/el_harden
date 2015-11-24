@@ -38,5 +38,5 @@ local7.*                                                /var/log/boot.log
 $template SpiceTmpl,"%TIMESTAMP%.%TIMESTAMP:::date-subseconds% %syslogtag% %syslogseverity-text%:%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n"
 :programname, startswith, "spice-vdagent"       /var/log/spice-vdagent.log;SpiceTmpl
 EOF
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

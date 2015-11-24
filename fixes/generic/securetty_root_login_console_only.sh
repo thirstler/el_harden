@@ -3,5 +3,5 @@
 
 {
 sed -i '/^vc\//d' /etc/securetty
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

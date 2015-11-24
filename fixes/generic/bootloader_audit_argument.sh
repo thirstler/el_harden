@@ -3,5 +3,5 @@
 
 {
 /sbin/grubby --update-kernel=ALL --args="audit=1"
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

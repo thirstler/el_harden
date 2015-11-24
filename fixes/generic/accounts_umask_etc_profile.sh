@@ -8,5 +8,5 @@ grep -q umask /etc/profile && \
 if ! [ $? -eq 0 ]; then
     echo "umask $var_accounts_user_umask" >> /etc/profile
 fi
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

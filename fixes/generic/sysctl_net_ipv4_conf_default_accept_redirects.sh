@@ -19,5 +19,5 @@ else
 	echo "net.ipv4.conf.default.accept_redirects = 0" >> /etc/sysctl.conf
 fi
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

@@ -9,5 +9,5 @@ if ! [ $? -eq 0 ]; then
     echo "PASS_MIN_LEN      $var_accounts_password_minlen_login_defs" >> /etc/login.defs
 fi
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

@@ -5,5 +5,5 @@
 if service vsftpd status; then
     service vsftpd stop
 fi
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

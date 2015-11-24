@@ -98,5 +98,5 @@ do
     fi
 
 done
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

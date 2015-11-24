@@ -19,5 +19,5 @@ else
 	echo "net.ipv4.tcp_syncookies = 1" >> /etc/sysctl.conf
 fi
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

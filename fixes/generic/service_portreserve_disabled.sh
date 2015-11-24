@@ -11,5 +11,5 @@
 #
 /sbin/service portreserve stop
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

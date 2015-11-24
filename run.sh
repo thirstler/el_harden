@@ -55,10 +55,10 @@ cat << EOF
 
                                ### WARNING ###
                               
-You're about to run a security "fixing" tool on this system. It sort of sticks
-your server in a salad-spinner of existential ruin. Make sure that's ok.
+You are about to run a security "fixing" tool on this system that will render it
+into hash-meal. Make sure you're ok with that.
 
-See ./run.log for info and errors and other stuff. This script will only echo
+See ./run.log for info and errors and other output. This script will only echo
 good things.
 
 EOF

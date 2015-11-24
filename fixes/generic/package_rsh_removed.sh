@@ -3,5 +3,5 @@
 
 {
 yum -q -y erase rsh
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

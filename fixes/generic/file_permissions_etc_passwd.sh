@@ -3,5 +3,5 @@
 
 {
 chmod 0644 /etc/passwd
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

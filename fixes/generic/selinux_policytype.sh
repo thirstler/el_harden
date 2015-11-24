@@ -8,5 +8,5 @@ grep -q ^SELINUXTYPE /etc/selinux/config && \
 if ! [ $? -eq 0 ]; then
     echo "SELINUXTYPE=$var_selinux_policy_name" >> /etc/selinux/config
 fi
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

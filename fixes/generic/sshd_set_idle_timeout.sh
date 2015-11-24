@@ -8,5 +8,5 @@ grep -q ^ClientAliveInterval /etc/ssh/sshd_config && \
 if ! [ $? -eq 0 ]; then
     echo "ClientAliveInterval $sshd_idle_timeout_value" >> /etc/ssh/sshd_config
 fi
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

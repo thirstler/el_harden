@@ -12,5 +12,5 @@
 #
 /sbin/service tftp stop
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

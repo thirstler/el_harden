@@ -3,5 +3,5 @@
 
 {
 chkconfig smb off
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

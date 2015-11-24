@@ -12,5 +12,5 @@
 #
 /sbin/service rpcidmapd stop
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 

@@ -14,5 +14,5 @@
 sed --follow-symlinks -Ei "/password\s+.+\s+pam_cracklib.so/d" /etc/pam.d/system-auth
 sed --follow-symlinks -Ei "s/(password\s+sufficient\s+pam_unix.so .*)/password    required      pam_cracklib.so try_first_pass retry=${CRACKLIB_PASSWORD_RETRIES} minlen=${CRACKLIB_PASSWORD_MINLEN} dcredit=${CRACKLIB_PASSWORD_DCREDIT} ucredit=${CRACKLIB_PASSWORD_UCREDIT} ocredit=${CRACKLIB_PASSWORD_OCREDIT} lcredit=${CRACKLIB_PASSWORD_LCREDIT} difok=${CRACKLIB_PASSWORD_DIFOK}\n\1/" /etc/pam.d/system-auth
 
-} &>> ${RUNROOT}/run.log
+} &>> ${RUNROOT}/${LOGFILE}
 
