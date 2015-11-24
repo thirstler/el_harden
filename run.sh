@@ -28,6 +28,11 @@ if [ ! -d ./fixes ]; then
 fi
 export RUNROOT=$(pwd)
 
+if [[ "$PROFILE_NAME" == "" ]]; then
+    echo "no profile loaded"
+    exit 1
+fi
+
 if [[ "$(id -u)" != "0" ]]; then
     echo "you no root???"
     exit 1

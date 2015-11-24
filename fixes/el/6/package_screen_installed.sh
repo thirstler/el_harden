@@ -1,0 +1,1 @@
+../../generic/package_screen_installed.sh

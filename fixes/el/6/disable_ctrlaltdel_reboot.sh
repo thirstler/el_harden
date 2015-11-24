@@ -1,0 +1,1 @@
+../../generic/disable_ctrlaltdel_reboot.sh

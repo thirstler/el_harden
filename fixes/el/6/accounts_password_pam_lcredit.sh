@@ -1,0 +1,1 @@
+../../generic/accounts_password_pam_lcredit.sh

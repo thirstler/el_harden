@@ -1,5 +1,6 @@
 ################################################################################
 # Remediation profile configuration for the Fedora SSG USGCB profile
+PROFILE_NAME="USGCB-el6"
 
 ##
 # We need a time-source.

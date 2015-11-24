@@ -58,3 +58,29 @@ EOF
     export RH_DIST=$(sed -E "s/(.+) release .*/\1/" /etc/redhat-release)
 }
 
+add_pam_cracklib_opt () {
+
+    OPTION=$1
+    VALUE="=$2"
+    FILE=$3
+
+    # If value is empty then there is no value
+    [[ "${VALUE}" == "=" ]] && VALUE=""
+
+    ##
+    # Add cracklib line before pam_unix in the password section if necessary
+    if ! grep -qE "^password\s+.+\s+pam_cracklib\.so" $FILE; then
+        sed --follow-symlinks -Ei "s/^(password\s+sufficient\s+pam_unix\.so .*)/password    required      pam_cracklib\.so try_first_pass\n\1/" $FILE
+    fi
+
+    ##
+    # Add/update option
+    if grep -qE "^password\s+[^\s]+\s+pam_cracklib\.so\s+.+?${OPTION}(=\w+)?" $FILE; then
+        sed --follow-symlinks -Ei "s/(^password\s+[^\s]+\s+pam_cracklib\.so\s+.+?)${OPTION}(=[^\s]+)?(.*)+/\1${OPTION}${VALUE}\3/" $FILE
+    else
+        sed --follow-symlinks -Ei "s/(^password\s+[^\s]+\s+pam_cracklib\.so.*)/\1 ${OPTION}${VALUE}/" $FILE
+    fi
+
+
+}
+
