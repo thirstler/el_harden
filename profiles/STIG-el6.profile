@@ -117,6 +117,7 @@ accounts_passwords_pam_faillock_deny \
 accounts_password_pam_unix_remember \
 set_password_hashing_algorithm_systemauth \
 set_password_hashing_algorithm_logindefs \
+accounts_max_concurrent_login_sessions \
 accounts_umask_bashrc \
 accounts_umask_cshrc \
 accounts_umask_etc_profile \

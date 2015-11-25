@@ -46,6 +46,8 @@ echo -n "running for $RH_DIST ver ${RH_VERSION}"
 [[ "${RH_TYPE}" == "fedora" ]] || echo -n ", release ${RH_RELEASE}"
 echo ""
 
+echo "Using profile name: $PROFILE_NAME"
+
 ##
 # Check that everything's there. If not then we should probably stop.
 for chk in $RULE_LIST; do
@@ -60,11 +62,10 @@ cat << EOF
 
                                ### WARNING ###
                               
-You are about to run a security "fixing" tool on this system that will render it
-into hash-meal. Make sure you're ok with that.
+You are about to run a security "fixing" tool on this system that will cause it
+to totally disintegrate. Make sure that's ok.
 
-See ./run.log for info and errors and other output. This script will only echo
-good things.
+See ${LOGFILE} for info and errors and other output.
 
 EOF
 
@@ -121,14 +122,24 @@ echo "already there (expires $(chage -l ${ADMIN_USER}|grep "^Account expires"|se
 fi
 fi
 
-##
-# Set root password to whatever
-echo -n "setting root password to random garbage..."
-cat /proc/sys/kernel/random/uuid|sed "s/\-//g"|passwd --stdin root &> /dev/null
-echo "done"
+if [[ "${IGNORE_ROOT^^}" != "Y" ]]; then
+if [[ "${DISABLE_ROOT^^}" == "Y" ]]; then
+    echo -n "disabling root account..."
+    usermod -p '!!' root
+    echo "done"
+else
+    ##
+    # Set root password to whatever
+    echo -n "setting root password..."
+    usermod -p ${ROOT_PASSWD} root
+    echo "done"
+fi
+echo "leaving root account unaltered"
+fi
 
 ##
-# Install scap-security-guide for functions and running an audit
+# Install scap-security-guide for some remediation functions and for running an
+# SCAP audit.
 if ! rpm -q scap-security-guide &> /dev/null; then
     echo -n "scap-security-guide package not installed, install it..."
     if ! yum -y install scap-security-guide &> /dev/null; then
@@ -140,7 +151,7 @@ if ! rpm -q scap-security-guide &> /dev/null; then
 fi
 
 # truncate the log
-:> ${RUNROOT}/run.log
+:> ${RUNROOT}/${LOGFILE}
 
 echo "do configuration changes..."
 for chk in $RULE_LIST; do
@@ -148,7 +159,7 @@ for chk in $RULE_LIST; do
         echo "WARNING: rule file not found: fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh"
     fi
     echo -n "running ${chk} ..."
-    echo "$(date) - ./fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh --" &>> ${RUNROOT}/run.log
+    echo "$(date) - ./fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh --" &>> ${RUNROOT}/${LOGFILE}
     ./fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh
     echo "done"
 done
@@ -159,7 +170,7 @@ echo -n "generating SCAP report for ${RUN_SCAP_PROFILE} benchmark:"
 oscap xccdf eval --profile ${RUN_SCAP_PROFILE} \
   --report /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html \
   --results /tmp/$(hostname)-${RUN_SCAP_PROFILE}-results.xml \
-  /usr/share/xml/scap/ssg/content/ssg-rhel6-xccdf.xml > /tmp/$(hostname)-${RUN_SCAP_PROFILE}.log
+  /usr/share/xml/scap/ssg/content/ssg-rhel6-xccdf.xml &>> ${RUNROOT}/${LOGFILE}
 COMP=$(grep '<td class="score-percent">' /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html | sed -E "s/\s+<.*>(.*)<.*>/\1/")
 echo "done (${COMP})"
 echo "full report file: /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html"

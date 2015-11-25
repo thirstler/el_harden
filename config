@@ -5,13 +5,13 @@
 # differ between selected profiles.
 
 ##
-# Script adds an administrative user by default.
-# Change username and/or UID here.
+# Script adds an administrative user by default. Set ADMIN_USER to nothing if
+# you don't want an admin user added. Change username and/or UID here.
 ADMIN_USER=secfix_admin
 ADMIN_UID=52768
 
 ##
-# !!!!!!!!! CHANGE ME !!!!!!!!!!!
+#                   !!!!!!!!! CHANGE ME !!!!!!!!!!!
 # Set password hash for the above mentioned administrative user. This file is
 # distributed with password: 'b3292f' (without quotes).  On RHEL 6/7 use
 # something like this to generate a hash:
@@ -19,10 +19,18 @@ ADMIN_UID=52768
 ADMIN_PASSWD='$6$HfSGwyknzFTB0jZX$N/alRNJxBbMIPJiSo89YYmDOh2ssJDdlcw/hsHqIFNg/rQNQEmPk053PoccKKZ9QiFi/VDWMhOP9ERxQiz35v0'
 
 ##
-# Bootloader password hash
-# !!!!!!!!! CHANGE ME !!!!!!!!!!!
-# Set to the admin user hash by default.
+# Bootloader password hash. Set to the admin user hash by default.
 BOOTLOADER_PASSWORD=${ADMIN_PASSWD}
+
+##
+# Root account options. If IGNORE_ROOT is set to "y" this utility will not
+# affect the root user in any way and DISABLE_ROOT and ROOT_PASSWD are ignored.
+# If DISABLE_ROOT is set to "y" the root account is disabled and the
+# ROOT_PASSWORD directive is ignored. ROOT_PASSWD should be set to the root
+# password hash if we're dot disabling the root account.
+IGNORE_ROOT="n"
+DISABLE_ROOT="y"
+ROOT_PASSWD=
 
 ##
 # Run SCAP audit after applying security configuation? (RUN_SCAP_PROFILE needs
@@ -44,11 +52,11 @@ LOGFILE=el_harden.log
 . ./functions
 
 ##
-# Choose a  remediation profile
+# Choose a remediation profile
 . ./profiles/C2S-el6.profile
 
 # END CONFIGURATION
 ###############################################################################
 
-export LOGFILE ADMIN_PASSWD BOOTLOADER_PASSWORD ADMIN_USER ADMIN_UID RUN_SCAP_AUDIT RUN_SCAP_PROFILE TARGET_LOG_HOST WRITE_DEFAULT_FIREWALL NTP1_SOURCE
+export ROOT_PASSWD DISABLE_ROOT LOGFILE ADMIN_PASSWD BOOTLOADER_PASSWORD ADMIN_USER ADMIN_UID RUN_SCAP_AUDIT RUN_SCAP_PROFILE TARGET_LOG_HOST WRITE_DEFAULT_FIREWALL NTP1_SOURCE
 

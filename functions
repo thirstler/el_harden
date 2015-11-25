@@ -72,6 +72,10 @@ add_pam_cracklib_opt () {
     if ! grep -qE "^password\s+.+\s+pam_cracklib\.so" $FILE; then
         sed --follow-symlinks -Ei "s/^(password\s+sufficient\s+pam_unix\.so .*)/password    required      pam_cracklib\.so try_first_pass\n\1/" $FILE
     fi
+    if ! grep -qE "^password\s+required\s+pam_cracklib\.so" $FILE; then
+        # Set to required if it's not
+        sed --follow-symlinks -Ei "s/^(password\s+)\w+(\s+pam_cracklib\.so.*)/\1required\2/" $FILE
+    fi
 
     ##
     # Add/update option

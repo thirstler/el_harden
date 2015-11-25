@@ -3,7 +3,8 @@
 
 {
 #
-# Disable prelinking altogether
+# Disable prelinking. Currently Fedora SSG content fails this check if the file
+# is not present.
 #
 if rpm -q prelink &> /dev/null; then
 
@@ -18,6 +19,9 @@ if rpm -q prelink &> /dev/null; then
     #
     /usr/sbin/prelink -ua
 else
+    ##
+    # Need to populate the file if prelink is not installed
+    echo 'PRELINKING=no' > /etc/sysconfig/prelink
     echo "prelink is not installed"
 fi
 
