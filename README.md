@@ -44,8 +44,7 @@ Notes:
  - Last but not least: Get a configuration management system (something like
    Foreman/Puppet). Scripts like this are really useful for configure-on-deploy
    setups but you should have a nice site config that meets target
-   requirements, there's no such thing as running something that will "harden"
-   your OS.
+   requirements.
    
 Prerequisites:
 
