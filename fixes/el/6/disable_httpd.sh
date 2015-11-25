@@ -1,1 +1,1 @@
-../../generic/disable_httpd.sh
+../../repo/disable_httpd.sh

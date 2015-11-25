@@ -1,1 +1,1 @@
-../../generic/accounts_umask_cshrc.sh
+../../repo/accounts_umask_cshrc.sh

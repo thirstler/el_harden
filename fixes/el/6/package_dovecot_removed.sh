@@ -1,1 +1,1 @@
-../../generic/package_dovecot_removed.sh
+../../repo/package_dovecot_removed.sh

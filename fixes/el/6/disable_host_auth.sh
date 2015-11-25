@@ -1,1 +1,1 @@
-../../generic/disable_host_auth.sh
+../../repo/disable_host_auth.sh

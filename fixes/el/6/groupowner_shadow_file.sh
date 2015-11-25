@@ -1,1 +1,1 @@
-../../generic/groupowner_shadow_file.sh
+../../repo/groupowner_shadow_file.sh

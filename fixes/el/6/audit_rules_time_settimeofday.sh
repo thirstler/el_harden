@@ -1,1 +1,1 @@
-../../generic/audit_rules_time_settimeofday.sh
+../../repo/audit_rules_time_settimeofday.sh

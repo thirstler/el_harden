@@ -1,1 +1,1 @@
-../../generic/rsyslog_send_messages_to_logserver.sh
+../../repo/rsyslog_send_messages_to_logserver.sh

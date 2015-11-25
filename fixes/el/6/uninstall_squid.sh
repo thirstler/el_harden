@@ -1,1 +1,1 @@
-../../generic/uninstall_squid.sh
+../../repo/uninstall_squid.sh

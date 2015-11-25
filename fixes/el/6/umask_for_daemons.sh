@@ -1,1 +1,1 @@
-../../generic/umask_for_daemons.sh
+../../repo/umask_for_daemons.sh

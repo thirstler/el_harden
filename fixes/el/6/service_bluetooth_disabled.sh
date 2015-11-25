@@ -1,1 +1,1 @@
-../../generic/service_bluetooth_disabled.sh
+../../repo/service_bluetooth_disabled.sh

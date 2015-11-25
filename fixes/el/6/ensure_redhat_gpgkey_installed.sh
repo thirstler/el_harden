@@ -1,1 +1,1 @@
-../../generic/ensure_redhat_gpgkey_installed.sh
+../../repo/ensure_redhat_gpgkey_installed.sh

@@ -1,1 +1,1 @@
-../../generic/accounts_password_pam_ocredit.sh
+../../repo/accounts_password_pam_ocredit.sh

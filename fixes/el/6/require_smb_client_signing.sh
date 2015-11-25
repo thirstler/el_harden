@@ -1,1 +1,1 @@
-../../generic/require_smb_client_signing.sh
+../../repo/require_smb_client_signing.sh

@@ -1,1 +1,1 @@
-../../generic/no_rsh_trust_files.sh
+../../repo/no_rsh_trust_files.sh

@@ -1,1 +1,1 @@
-../../generic/sshd_enable_warning_banner.sh
+../../repo/sshd_enable_warning_banner.sh

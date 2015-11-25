@@ -1,1 +1,1 @@
-../../generic/sysctl_net_ipv6_conf_default_accept_ra.sh
+../../repo/sysctl_net_ipv6_conf_default_accept_ra.sh

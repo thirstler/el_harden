@@ -1,1 +1,1 @@
-../../generic/accounts_max_concurrent_login_sessions.sh
+../../repo/accounts_max_concurrent_login_sessions.sh

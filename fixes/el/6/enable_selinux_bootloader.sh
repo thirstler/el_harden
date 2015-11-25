@@ -1,1 +1,1 @@
-../../generic/enable_selinux_bootloader.sh
+../../repo/enable_selinux_bootloader.sh

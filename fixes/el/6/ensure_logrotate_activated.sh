@@ -1,1 +1,1 @@
-../../generic/ensure_logrotate_activated.sh
+../../repo/ensure_logrotate_activated.sh

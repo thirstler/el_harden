@@ -1,1 +1,1 @@
-../../generic/service_rhnsd_disabled.sh
+../../repo/service_rhnsd_disabled.sh

@@ -1,1 +1,1 @@
-../../generic/audit_rules_dac_modification_lchown.sh
+../../repo/audit_rules_dac_modification_lchown.sh

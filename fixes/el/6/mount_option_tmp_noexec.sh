@@ -1,1 +1,1 @@
-../../generic/mount_option_tmp_noexec.sh
+../../repo/mount_option_tmp_noexec.sh

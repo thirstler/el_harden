@@ -1,1 +1,1 @@
-../../generic/uninstall_bind.sh
+../../repo/uninstall_bind.sh

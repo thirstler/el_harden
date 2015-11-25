@@ -1,1 +1,1 @@
-../../generic/service_ip6tables_enabled.sh
+../../repo/service_ip6tables_enabled.sh

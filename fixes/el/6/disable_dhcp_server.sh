@@ -1,1 +1,1 @@
-../../generic/disable_dhcp_server.sh
+../../repo/disable_dhcp_server.sh

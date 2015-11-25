@@ -1,1 +1,1 @@
-../../generic/file_permissions_etc_passwd.sh
+../../repo/file_permissions_etc_passwd.sh

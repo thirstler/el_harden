@@ -1,1 +1,1 @@
-../../generic/service_cups_disabled.sh
+../../repo/service_cups_disabled.sh

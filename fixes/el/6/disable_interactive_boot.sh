@@ -1,1 +1,1 @@
-../../generic/disable_interactive_boot.sh
+../../repo/disable_interactive_boot.sh

@@ -1,1 +1,1 @@
-../../generic/sysctl_net_ipv4_icmp_ignore_bogus_error_responses.sh
+../../repo/sysctl_net_ipv4_icmp_ignore_bogus_error_responses.sh

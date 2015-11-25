@@ -1,1 +1,1 @@
-../../generic/package_openldap-servers_removed.sh
+../../repo/package_openldap-servers_removed.sh

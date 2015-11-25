@@ -1,1 +1,1 @@
-../../generic/audit_rules_usergroup_modification.sh
+../../repo/audit_rules_usergroup_modification.sh

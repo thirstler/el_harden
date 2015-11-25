@@ -1,1 +1,1 @@
-../../generic/audit_rules_dac_modification_fsetxattr.sh
+../../repo/audit_rules_dac_modification_fsetxattr.sh

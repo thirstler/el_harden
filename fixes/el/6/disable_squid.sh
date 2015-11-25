@@ -1,1 +1,1 @@
-../../generic/disable_squid.sh
+../../repo/disable_squid.sh

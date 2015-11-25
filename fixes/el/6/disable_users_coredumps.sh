@@ -1,1 +1,1 @@
-../../generic/disable_users_coredumps.sh
+../../repo/disable_users_coredumps.sh

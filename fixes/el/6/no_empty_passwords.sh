@@ -1,1 +1,1 @@
-../../generic/no_empty_passwords.sh
+../../repo/no_empty_passwords.sh

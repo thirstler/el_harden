@@ -1,1 +1,1 @@
-../../generic/network_disable_zeroconf.sh
+../../repo/network_disable_zeroconf.sh

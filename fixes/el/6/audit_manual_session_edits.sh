@@ -1,1 +1,1 @@
-../../generic/audit_manual_session_edits.sh
+../../repo/audit_manual_session_edits.sh

@@ -1,1 +1,1 @@
-../../generic/mount_option_dev_shm_nosuid.sh
+../../repo/mount_option_dev_shm_nosuid.sh

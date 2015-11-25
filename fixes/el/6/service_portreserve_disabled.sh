@@ -1,1 +1,1 @@
-../../generic/service_portreserve_disabled.sh
+../../repo/service_portreserve_disabled.sh

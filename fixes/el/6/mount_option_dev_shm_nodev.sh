@@ -1,1 +1,1 @@
-../../generic/mount_option_dev_shm_nodev.sh
+../../repo/mount_option_dev_shm_nodev.sh

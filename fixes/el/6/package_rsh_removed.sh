@@ -1,1 +1,1 @@
-../../generic/package_rsh_removed.sh
+../../repo/package_rsh_removed.sh

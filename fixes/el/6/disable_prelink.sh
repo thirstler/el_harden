@@ -1,1 +1,1 @@
-../../generic/disable_prelink.sh
+../../repo/disable_prelink.sh

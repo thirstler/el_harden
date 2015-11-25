@@ -1,1 +1,1 @@
-../../generic/sysctl_fs_suid_dumpable.sh
+../../repo/sysctl_fs_suid_dumpable.sh

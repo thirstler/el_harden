@@ -1,1 +1,1 @@
-../../generic/kernel_module_jffs2_disabled.sh
+../../repo/kernel_module_jffs2_disabled.sh

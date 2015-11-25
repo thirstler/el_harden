@@ -1,1 +1,1 @@
-../../generic/uninstall_telnet_server.sh
+../../repo/uninstall_telnet_server.sh

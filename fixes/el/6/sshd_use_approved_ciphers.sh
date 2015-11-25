@@ -1,1 +1,1 @@
-../../generic/sshd_use_approved_ciphers.sh
+../../repo/sshd_use_approved_ciphers.sh

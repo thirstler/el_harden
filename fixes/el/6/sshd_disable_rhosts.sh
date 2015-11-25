@@ -1,1 +1,1 @@
-../../generic/sshd_disable_rhosts.sh
+../../repo/sshd_disable_rhosts.sh

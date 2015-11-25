@@ -1,1 +1,1 @@
-../../generic/audit_rules_networkconfig_modification.sh
+../../repo/audit_rules_networkconfig_modification.sh

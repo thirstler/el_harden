@@ -1,1 +1,1 @@
-../../generic/aide_build_database.sh
+../../repo/aide_build_database.sh

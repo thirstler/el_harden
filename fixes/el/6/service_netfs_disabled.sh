@@ -1,1 +1,1 @@
-../../generic/service_netfs_disabled.sh
+../../repo/service_netfs_disabled.sh

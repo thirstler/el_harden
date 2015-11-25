@@ -1,1 +1,1 @@
-../../generic/service_rpcidmapd_disabled.sh
+../../repo/service_rpcidmapd_disabled.sh

@@ -1,1 +1,1 @@
-../../generic/service_ntpd_enabled.sh
+../../repo/service_ntpd_enabled.sh

@@ -1,1 +1,1 @@
-../../generic/uninstall_ypserv.sh
+../../repo/uninstall_ypserv.sh

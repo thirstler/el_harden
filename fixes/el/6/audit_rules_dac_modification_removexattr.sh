@@ -1,1 +1,1 @@
-../../generic/audit_rules_dac_modification_removexattr.sh
+../../repo/audit_rules_dac_modification_removexattr.sh

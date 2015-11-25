@@ -1,1 +1,1 @@
-../../generic/audit_rules_login_events.sh
+../../repo/audit_rules_login_events.sh

@@ -1,1 +1,1 @@
-../../generic/sysctl_net_ipv4_conf_default_rp_filter.sh
+../../repo/sysctl_net_ipv4_conf_default_rp_filter.sh

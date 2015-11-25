@@ -1,1 +1,1 @@
-../../generic/package_tftp_removed.sh
+../../repo/package_tftp_removed.sh

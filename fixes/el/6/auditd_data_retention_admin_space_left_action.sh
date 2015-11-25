@@ -1,1 +1,1 @@
-../../generic/auditd_data_retention_admin_space_left_action.sh
+../../repo/auditd_data_retention_admin_space_left_action.sh

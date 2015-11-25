@@ -1,1 +1,1 @@
-../../generic/sshd_disable_root_login.sh
+../../repo/sshd_disable_root_login.sh

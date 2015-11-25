@@ -1,1 +1,1 @@
-../../generic/package_sendmail_removed.sh
+../../repo/package_sendmail_removed.sh

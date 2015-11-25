@@ -1,1 +1,1 @@
-../../generic/package_httpd_removed.sh
+../../repo/package_httpd_removed.sh

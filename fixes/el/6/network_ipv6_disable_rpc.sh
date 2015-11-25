@@ -1,1 +1,1 @@
-../../generic/network_ipv6_disable_rpc.sh
+../../repo/network_ipv6_disable_rpc.sh

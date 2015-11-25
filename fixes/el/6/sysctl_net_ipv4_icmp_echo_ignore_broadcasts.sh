@@ -1,1 +1,1 @@
-../../generic/sysctl_net_ipv4_icmp_echo_ignore_broadcasts.sh
+../../repo/sysctl_net_ipv4_icmp_echo_ignore_broadcasts.sh

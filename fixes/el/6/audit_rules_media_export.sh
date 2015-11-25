@@ -1,1 +1,1 @@
-../../generic/audit_rules_media_export.sh
+../../repo/audit_rules_media_export.sh

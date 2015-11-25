@@ -1,1 +1,1 @@
-../../generic/service_auditd_enabled.sh
+../../repo/service_auditd_enabled.sh

@@ -1,1 +1,1 @@
-../../generic/accounts_password_minlen_login_defs.sh
+../../repo/accounts_password_minlen_login_defs.sh

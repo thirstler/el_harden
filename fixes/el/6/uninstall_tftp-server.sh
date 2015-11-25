@@ -1,1 +1,1 @@
-../../generic/uninstall_tftp-server.sh
+../../repo/uninstall_tftp-server.sh

@@ -1,1 +1,1 @@
-../../generic/audit_rules_unsuccessful_file_modification.sh
+../../repo/audit_rules_unsuccessful_file_modification.sh

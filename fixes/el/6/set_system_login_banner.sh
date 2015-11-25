@@ -1,1 +1,1 @@
-../../generic/set_system_login_banner.sh
+../../repo/set_system_login_banner.sh

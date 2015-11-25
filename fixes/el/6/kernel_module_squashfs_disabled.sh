@@ -1,1 +1,1 @@
-../../generic/kernel_module_squashfs_disabled.sh
+../../repo/kernel_module_squashfs_disabled.sh

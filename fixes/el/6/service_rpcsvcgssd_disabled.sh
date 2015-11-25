@@ -1,1 +1,1 @@
-../../generic/service_rpcsvcgssd_disabled.sh
+../../repo/service_rpcsvcgssd_disabled.sh

@@ -1,1 +1,1 @@
-../../generic/sshd_allow_only_protocol2.sh
+../../repo/sshd_allow_only_protocol2.sh

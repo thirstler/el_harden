@@ -1,1 +1,1 @@
-../../generic/aide_periodic_cron_checking.sh
+../../repo/aide_periodic_cron_checking.sh

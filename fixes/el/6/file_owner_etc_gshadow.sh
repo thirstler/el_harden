@@ -1,1 +1,1 @@
-../../generic/file_owner_etc_gshadow.sh
+../../repo/file_owner_etc_gshadow.sh

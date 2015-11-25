@@ -1,1 +1,1 @@
-../../generic/selinux_state.sh
+../../repo/selinux_state.sh

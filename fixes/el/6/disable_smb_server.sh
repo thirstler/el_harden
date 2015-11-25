@@ -1,1 +1,1 @@
-../../generic/disable_smb_server.sh
+../../repo/disable_smb_server.sh

@@ -1,1 +1,1 @@
-../../generic/disable_avahi.sh
+../../repo/disable_avahi.sh

@@ -1,1 +1,1 @@
-../../generic/require_singleuser_auth.sh
+../../repo/require_singleuser_auth.sh

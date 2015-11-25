@@ -1,1 +1,1 @@
-../../generic/service_crond_enabled.sh
+../../repo/service_crond_enabled.sh

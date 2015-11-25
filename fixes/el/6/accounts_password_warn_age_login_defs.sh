@@ -1,1 +1,1 @@
-../../generic/accounts_password_warn_age_login_defs.sh
+../../repo/accounts_password_warn_age_login_defs.sh

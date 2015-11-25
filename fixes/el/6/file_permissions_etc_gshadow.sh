@@ -1,1 +1,1 @@
-../../generic/file_permissions_etc_gshadow.sh
+../../repo/file_permissions_etc_gshadow.sh

@@ -1,1 +1,1 @@
-../../generic/uninstall_xinetd.sh
+../../repo/uninstall_xinetd.sh

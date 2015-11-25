@@ -1,1 +1,1 @@
-../../generic/package_setroubleshoot_removed.sh
+../../repo/package_setroubleshoot_removed.sh

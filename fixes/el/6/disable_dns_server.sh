@@ -1,1 +1,1 @@
-../../generic/disable_dns_server.sh
+../../repo/disable_dns_server.sh

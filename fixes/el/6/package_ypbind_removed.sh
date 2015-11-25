@@ -1,1 +1,1 @@
-../../generic/package_ypbind_removed.sh
+../../repo/package_ypbind_removed.sh

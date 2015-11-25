@@ -1,1 +1,1 @@
-../../generic/file_groupowner_etc_passwd.sh
+../../repo/file_groupowner_etc_passwd.sh

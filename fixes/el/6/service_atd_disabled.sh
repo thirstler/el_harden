@@ -1,1 +1,1 @@
-../../generic/service_atd_disabled.sh
+../../repo/service_atd_disabled.sh

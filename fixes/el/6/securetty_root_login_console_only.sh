@@ -1,1 +1,1 @@
-../../generic/securetty_root_login_console_only.sh
+../../repo/securetty_root_login_console_only.sh

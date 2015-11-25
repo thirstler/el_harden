@@ -1,1 +1,1 @@
-../../generic/file_permissions_binary_dirs.sh
+../../repo/file_permissions_binary_dirs.sh

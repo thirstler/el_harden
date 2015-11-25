@@ -1,1 +1,1 @@
-../../generic/bootloader_password.sh
+../../repo/bootloader_password.sh

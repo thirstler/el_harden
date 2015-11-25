@@ -1,1 +1,1 @@
-../../generic/audit_rules_privileged_commands.sh
+../../repo/audit_rules_privileged_commands.sh

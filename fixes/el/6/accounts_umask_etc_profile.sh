@@ -1,1 +1,1 @@
-../../generic/accounts_umask_etc_profile.sh
+../../repo/accounts_umask_etc_profile.sh

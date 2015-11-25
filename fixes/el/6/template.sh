@@ -1,1 +1,1 @@
-../../generic/template.sh
+../../repo/template.sh

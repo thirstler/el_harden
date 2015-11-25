@@ -1,1 +1,1 @@
-../../generic/package_mcstrans_removed.sh
+../../repo/package_mcstrans_removed.sh

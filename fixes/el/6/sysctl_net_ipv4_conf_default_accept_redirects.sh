@@ -1,1 +1,1 @@
-../../generic/sysctl_net_ipv4_conf_default_accept_redirects.sh
+../../repo/sysctl_net_ipv4_conf_default_accept_redirects.sh

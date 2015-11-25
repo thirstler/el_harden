@@ -1,1 +1,1 @@
-../../generic/uninstall_dhcp_server.sh
+../../repo/uninstall_dhcp_server.sh

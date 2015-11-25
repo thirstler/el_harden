@@ -1,1 +1,1 @@
-../../generic/display_login_attempts.sh
+../../repo/display_login_attempts.sh

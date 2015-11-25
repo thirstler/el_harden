@@ -1,1 +1,1 @@
-../../generic/sticky_world_writable_dirs.sh
+../../repo/sticky_world_writable_dirs.sh

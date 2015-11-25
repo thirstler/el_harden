@@ -1,1 +1,1 @@
-../../generic/service_nfslock_disabled.sh
+../../repo/service_nfslock_disabled.sh

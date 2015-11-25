@@ -1,1 +1,1 @@
-../../generic/sshd_disable_empty_passwords.sh
+../../repo/sshd_disable_empty_passwords.sh

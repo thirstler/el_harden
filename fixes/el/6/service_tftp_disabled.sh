@@ -1,1 +1,1 @@
-../../generic/service_tftp_disabled.sh
+../../repo/service_tftp_disabled.sh

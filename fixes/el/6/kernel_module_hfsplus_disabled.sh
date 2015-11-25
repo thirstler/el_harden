@@ -1,1 +1,1 @@
-../../generic/kernel_module_hfsplus_disabled.sh
+../../repo/kernel_module_hfsplus_disabled.sh

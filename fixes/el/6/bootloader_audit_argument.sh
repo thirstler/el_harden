@@ -1,1 +1,1 @@
-../../generic/bootloader_audit_argument.sh
+../../repo/bootloader_audit_argument.sh

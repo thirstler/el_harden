@@ -1,1 +1,1 @@
-../../generic/uninstall_vsftpd.sh
+../../repo/uninstall_vsftpd.sh

@@ -1,1 +1,1 @@
-../../generic/kernel_module_udf_disabled.sh
+../../repo/kernel_module_udf_disabled.sh

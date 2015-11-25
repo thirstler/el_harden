@@ -1,1 +1,1 @@
-../../generic/package_aide_installed.sh
+../../repo/package_aide_installed.sh

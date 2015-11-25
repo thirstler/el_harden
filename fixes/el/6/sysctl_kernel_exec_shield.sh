@@ -1,1 +1,1 @@
-../../generic/sysctl_kernel_exec_shield.sh
+../../repo/sysctl_kernel_exec_shield.sh

@@ -1,1 +1,1 @@
-../../generic/package_openswan_installed.sh
+../../repo/package_openswan_installed.sh

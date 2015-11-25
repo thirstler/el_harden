@@ -1,1 +1,1 @@
-../../generic/package_rsyslog_installed.sh
+../../repo/package_rsyslog_installed.sh

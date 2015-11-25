@@ -1,1 +1,1 @@
-../../generic/audit_rules_mac_modification.sh
+../../repo/audit_rules_mac_modification.sh

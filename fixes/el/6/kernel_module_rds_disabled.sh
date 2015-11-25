@@ -1,1 +1,1 @@
-../../generic/kernel_module_rds_disabled.sh
+../../repo/kernel_module_rds_disabled.sh

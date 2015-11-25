@@ -1,1 +1,1 @@
-../../generic/disable_ctrlaltdel_reboot.sh
+../../repo/disable_ctrlaltdel_reboot.sh

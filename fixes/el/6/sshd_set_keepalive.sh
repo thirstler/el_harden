@@ -1,1 +1,1 @@
-../../generic/sshd_set_keepalive.sh
+../../repo/sshd_set_keepalive.sh

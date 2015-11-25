@@ -1,1 +1,1 @@
-../../generic/service_kdump_disabled.sh
+../../repo/service_kdump_disabled.sh

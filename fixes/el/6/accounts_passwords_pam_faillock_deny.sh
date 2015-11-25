@@ -1,1 +1,1 @@
-../../generic/accounts_passwords_pam_faillock_deny.sh
+../../repo/accounts_passwords_pam_faillock_deny.sh

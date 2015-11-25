@@ -1,1 +1,1 @@
-../../generic/service_autofs_disabled.sh
+../../repo/service_autofs_disabled.sh

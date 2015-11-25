@@ -1,1 +1,1 @@
-../../generic/audit_rules_immutable.sh
+../../repo/audit_rules_immutable.sh

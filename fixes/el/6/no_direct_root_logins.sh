@@ -1,1 +1,1 @@
-../../generic/no_direct_root_logins.sh
+../../repo/no_direct_root_logins.sh

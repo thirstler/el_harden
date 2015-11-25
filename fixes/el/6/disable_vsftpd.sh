@@ -1,1 +1,1 @@
-../../generic/disable_vsftpd.sh
+../../repo/disable_vsftpd.sh

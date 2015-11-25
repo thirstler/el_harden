@@ -1,1 +1,1 @@
-../../generic/selinux_policytype.sh
+../../repo/selinux_policytype.sh

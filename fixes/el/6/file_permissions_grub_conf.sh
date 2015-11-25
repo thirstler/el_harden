@@ -1,1 +1,1 @@
-../../generic/file_permissions_grub_conf.sh
+../../repo/file_permissions_grub_conf.sh

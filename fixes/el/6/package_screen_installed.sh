@@ -1,1 +1,1 @@
-../../generic/package_screen_installed.sh
+../../repo/package_screen_installed.sh

@@ -1,1 +1,1 @@
-../../generic/ntpd_specify_remote_server.sh
+../../repo/ntpd_specify_remote_server.sh

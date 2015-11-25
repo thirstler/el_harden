@@ -1,1 +1,1 @@
-../../generic/service_rsyslog_enabled.sh
+../../repo/service_rsyslog_enabled.sh

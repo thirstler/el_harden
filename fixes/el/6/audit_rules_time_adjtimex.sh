@@ -1,1 +1,1 @@
-../../generic/audit_rules_time_adjtimex.sh
+../../repo/audit_rules_time_adjtimex.sh

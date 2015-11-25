@@ -1,1 +1,1 @@
-../../generic/disable_snmpd.sh
+../../repo/disable_snmpd.sh

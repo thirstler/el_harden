@@ -1,1 +1,1 @@
-../../generic/accounts_umask_login_defs.sh
+../../repo/accounts_umask_login_defs.sh

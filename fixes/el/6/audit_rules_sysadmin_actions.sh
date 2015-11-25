@@ -1,1 +1,1 @@
-../../generic/audit_rules_sysadmin_actions.sh
+../../repo/audit_rules_sysadmin_actions.sh

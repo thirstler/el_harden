@@ -1,1 +1,1 @@
-../../generic/accounts_minimum_age_login_defs.sh
+../../repo/accounts_minimum_age_login_defs.sh

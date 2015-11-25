@@ -1,1 +1,1 @@
-../../generic/disable_dovecot.sh
+../../repo/disable_dovecot.sh

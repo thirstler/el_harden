@@ -1,1 +1,1 @@
-../../generic/packagegroup_xwindows_remove.sh
+../../repo/packagegroup_xwindows_remove.sh

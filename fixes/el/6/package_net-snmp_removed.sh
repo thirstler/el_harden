@@ -1,1 +1,1 @@
-../../generic/package_net-snmp_removed.sh
+../../repo/package_net-snmp_removed.sh

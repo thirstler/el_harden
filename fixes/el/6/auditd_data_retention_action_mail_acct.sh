@@ -1,1 +1,1 @@
-../../generic/auditd_data_retention_action_mail_acct.sh
+../../repo/auditd_data_retention_action_mail_acct.sh

@@ -1,1 +1,1 @@
-../../generic/audit_rules_kernel_module_loading.sh
+../../repo/audit_rules_kernel_module_loading.sh

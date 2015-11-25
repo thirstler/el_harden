@@ -1,1 +1,1 @@
-../../generic/accounts_umask_bashrc.sh
+../../repo/accounts_umask_bashrc.sh

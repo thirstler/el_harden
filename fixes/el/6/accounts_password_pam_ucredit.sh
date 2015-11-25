@@ -1,1 +1,1 @@
-../../generic/accounts_password_pam_ucredit.sh
+../../repo/accounts_password_pam_ucredit.sh
