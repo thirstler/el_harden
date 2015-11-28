@@ -166,6 +166,7 @@ done
 
 if [[ ${RUN_SCAP_AUDIT} == "y" ]]; then
 
+if [[ ${RH_TYPE} == "redhat" ]]; then
 echo -n "generating SCAP report for ${RUN_SCAP_PROFILE} benchmark:"
 oscap xccdf eval --profile ${RUN_SCAP_PROFILE} \
   --report /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html \
@@ -177,7 +178,12 @@ echo "full report file: /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html"
 echo ""
 echo "reboot and rerun SCAP scan (or this script) for more accuracy in this report."
 echo "A reboot is needed to update some detections."
-
+else
+cat << EOF
+OS is not Red Hat (it's ${RH_DIST}), please download the Fedora SSG and scan
+manuallly
+EOF
+fi
 fi
 
 echo -n "clean-up..."
