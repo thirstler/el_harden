@@ -12,6 +12,12 @@ NTP2_SOURCE="3.fedora.pool.ntp.org"
 TARGET_LOG_HOST="127.0.0.1"
 
 ##
+# Set to a valid user or email address to establish the destination for AIDE
+# reports. Defaults to "" which will send reports and output  to /dev/null.
+# You'll want to set this to be part of a working IDS.
+#AID_REPORT_ADDRESS=""
+
+##
 # Wait of n days required for password change
 MINIMUM_AGE_LOGIN_DEFS="7"
 
