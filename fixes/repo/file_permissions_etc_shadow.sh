@@ -3,5 +3,5 @@
 
 {
 chmod 0000 /etc/shadow
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

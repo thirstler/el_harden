@@ -3,5 +3,5 @@
 
 {
 yum -q -y erase sendmail
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

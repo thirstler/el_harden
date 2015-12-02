@@ -5,5 +5,5 @@
 if rpm -qa | grep -q vsftpd; then
     yum -y erase vsftpd
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

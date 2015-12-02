@@ -34,5 +34,5 @@ then
     done
   fi
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

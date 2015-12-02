@@ -5,5 +5,5 @@
 {
 service named stop
 chkconfig named off
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

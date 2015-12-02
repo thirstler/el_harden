@@ -17,5 +17,5 @@ gconftool-2 --direct \
             --config-source "xml:readwrite:/etc/gconf/gconf.xml.mandatory" \
             --type string \
             --set /apps/gdm/simple-greeter/banner_message_text "${banner_expanded}"
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

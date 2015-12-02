@@ -3,5 +3,5 @@
 
 {
 :> /etc/securetty
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

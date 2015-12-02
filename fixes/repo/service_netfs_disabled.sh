@@ -12,5 +12,5 @@
 #
 /sbin/service netfs stop
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

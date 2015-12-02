@@ -12,5 +12,5 @@
 #
 /sbin/service crond start
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

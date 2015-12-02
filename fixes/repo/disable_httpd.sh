@@ -5,5 +5,5 @@
 {
 chkconfig httpd off
 service httpd stop
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

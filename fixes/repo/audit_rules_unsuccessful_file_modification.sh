@@ -26,5 +26,5 @@ do
 	fix_audit_syscall_rule "$PATTERN" "$GROUP" "$ARCH" "$FULL_RULE"
 
 done
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

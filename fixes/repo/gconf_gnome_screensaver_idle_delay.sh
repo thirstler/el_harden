@@ -14,5 +14,5 @@ gconftool-2 --direct \
             --config-source "xml:readwrite:/etc/gconf/gconf.xml.mandatory" \
             --type int \
             --set /desktop/gnome/session/idle_delay ${inactivity_timeout_value}
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

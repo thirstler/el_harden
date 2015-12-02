@@ -19,5 +19,5 @@ else
 	echo "fs.suid_dumpable = 0" >> /etc/sysctl.conf
 fi
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

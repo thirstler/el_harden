@@ -10,6 +10,6 @@
 sed -Ei "/\*\s+hard\s+core\s+/d" /etc/security/limits.conf
 echo "*                hard    core            ${LIMITS_CORE}" >> /etc/security/limits.conf
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 
 

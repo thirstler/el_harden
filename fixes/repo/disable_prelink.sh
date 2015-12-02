@@ -25,5 +25,5 @@ else
     echo "prelink is not installed"
 fi
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

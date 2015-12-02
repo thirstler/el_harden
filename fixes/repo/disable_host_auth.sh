@@ -7,5 +7,5 @@ grep -q ^HostbasedAuthentication /etc/ssh/sshd_config && \
 if ! [ $? -eq 0 ]; then
     echo "HostbasedAuthentication no" >> /etc/ssh/sshd_config
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

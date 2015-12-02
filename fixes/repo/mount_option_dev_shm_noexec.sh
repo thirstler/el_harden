@@ -6,5 +6,5 @@
 . functions
 
 add_mp_opt "/dev/shm" "noexec"
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

@@ -3,5 +3,5 @@
 
 {
 chown root /etc/passwd
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

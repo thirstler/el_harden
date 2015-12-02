@@ -3,4 +3,4 @@
 
 {
 yum -q -y install screen
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}

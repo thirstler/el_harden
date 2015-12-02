@@ -12,5 +12,5 @@
 #
 /sbin/service kdump stop
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

@@ -12,5 +12,5 @@
 #
 /sbin/service rpcsvcgssd stop
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

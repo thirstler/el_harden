@@ -3,5 +3,5 @@
 
 {
 chgrp root /etc/gshadow
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

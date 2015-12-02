@@ -9,5 +9,5 @@ else
 	echo "ENCRYPT_METHOD SHA512" >> /etc/login.defs
 fi
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

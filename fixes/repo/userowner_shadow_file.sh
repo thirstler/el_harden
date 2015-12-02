@@ -3,5 +3,5 @@
 
 {
 chown root /etc/shadow
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

@@ -5,5 +5,5 @@
 
 yum -q -y install openswan
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

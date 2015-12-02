@@ -3,6 +3,6 @@
 
 {
 chkconfig squid off
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 
 

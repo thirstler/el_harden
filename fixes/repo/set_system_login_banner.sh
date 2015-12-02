@@ -19,5 +19,5 @@ EOF
 printf "\n" >> /etc/issue
 fi
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

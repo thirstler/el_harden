@@ -3,4 +3,4 @@
 
 {
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}

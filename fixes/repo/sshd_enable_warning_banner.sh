@@ -7,5 +7,5 @@ grep -q ^Banner /etc/ssh/sshd_config && \
 if ! [ $? -eq 0 ]; then
     echo "Banner /etc/issue" >> /etc/ssh/sshd_config
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

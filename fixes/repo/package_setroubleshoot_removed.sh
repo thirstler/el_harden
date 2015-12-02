@@ -3,4 +3,4 @@
 
 {
 yum -q -y erase setroubleshoot
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}

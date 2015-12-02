@@ -1,6 +1,7 @@
 ################################################################################
 # Remediation profile configuration for the Fedora SSG USGCB profile
 PROFILE_NAME="STIG-el6"
+PROFILE_OS_MATCH="rhel-6"
 
 ##
 # We need a time-source.

@@ -3,5 +3,5 @@
 
 {
 chmod 644 /etc/group
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

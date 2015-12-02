@@ -51,9 +51,9 @@ EOF
     export RH_RELEASE=$(sed -E "s/.+release [0-9]+\.([0-9]+) .+/\1/" /etc/redhat-release)
     export RH_TYPE=$(
         (grep -qi "fedora" /etc/redhat-release && echo "fedora")
-        (grep -qi "centos" /etc/redhat-release && echo "el")
-        (grep -qi "red hat" /etc/redhat-release && echo "el")
-        (grep -qi "scientific" /etc/redhat-release && echo "el")
+        (grep -qi "centos" /etc/redhat-release && echo "centos")
+        (grep -qi "red hat" /etc/redhat-release && echo "rhel")
+        (grep -qi "scientific" /etc/redhat-release && echo "sl")
     )
     export RH_DIST=$(sed -E "s/(.+) release .*/\1/" /etc/redhat-release)
 }
@@ -86,5 +86,18 @@ add_pam_cracklib_opt () {
     fi
 
 
+}
+
+show_help () {
+    cat << EOF
+Usage: run [OPTION]...
+Alters system configuration pursuant to the selected profile.
+
+Possible arguments:
+  -c, --config    select a configuration file other than the default ("config"
+                  in the same directory with this script). 
+  -h, --help      this help.
+
+EOF
 }
 

@@ -9,4 +9,4 @@ grep -q ^PASS_WARN_AGE /etc/login.defs && \
 if ! [ $? -eq 0 ]; then
     echo "PASS_WARN_AGE      ${PASSWORD_WARN_AGE_LOGIN_DEFS}" >> /etc/login.defs
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}

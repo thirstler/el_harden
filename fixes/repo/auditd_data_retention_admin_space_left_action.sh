@@ -8,5 +8,5 @@ grep -q ^admin_space_left_action /etc/audit/auditd.conf && \
 if ! [ $? -eq 0 ]; then
     echo "admin_space_left_action = $var_auditd_admin_space_left_action" >> /etc/audit/auditd.conf
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

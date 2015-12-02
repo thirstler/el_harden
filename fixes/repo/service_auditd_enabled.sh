@@ -11,5 +11,5 @@
 # Start auditd if not currently running
 #
 /sbin/service auditd start
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

@@ -10,4 +10,4 @@
 sed -Ei "/\*\s+hard\s+maxlogins\s+/d" /etc/security/limits.conf
 echo "*                hard    maxlogins       ${LIMITS_MAX_LOGINS}" >> /etc/security/limits.conf
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}

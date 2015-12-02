@@ -3,4 +3,4 @@
 
 {
 yum -y erase openldap-servers
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}

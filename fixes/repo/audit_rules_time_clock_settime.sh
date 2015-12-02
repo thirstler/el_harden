@@ -16,5 +16,5 @@ do
 	FULL_RULE="-a always,exit -F arch=$ARCH -S clock_settime -k audit_time_rules"
 	fix_audit_syscall_rule "$PATTERN" "$GROUP" "$ARCH" "$FULL_RULE"
 done
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

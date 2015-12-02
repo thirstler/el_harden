@@ -17,16 +17,33 @@
 #
 ################################################################################
 . ./config
+. ./functions
 ################################################################################
+
+TEMP=$(getopt -o c:p:h --long config:,profile:,help -- "$@")
+eval set -- "$TEMP"
+
+
+# extract options and their arguments into variables.
+while true ; do
+    case "$1" in
+        -c|--config) CONFIG_FILE="$2" ; shift 2 ;;
+        -h|--help) show_help ; shift 1;;
+        --) shift ; break ;;
+        *) echo "Internal error!" ; exit 1 ;;
+    esac
+done
+
+echo 
 
 
 ##
 # Sanity checks
-if [ ! -d ./fixes ]; then
-    echo "where the hell are we? exiting."
+: ${CONFIG_FILE:="./config"}
+if [ ! -f "${CONFIG_FILE}" ]; then
+    echo "hellooooo? config file? (${CONFIG_FILE})"
     exit 1
 fi
-export RUNROOT=$(pwd)
 
 if [[ "$PROFILE_NAME" == "" ]]; then
     echo "no profile loaded"
@@ -47,6 +64,14 @@ echo -n "running for $RH_DIST ver ${RH_VERSION}"
 echo ""
 
 echo "Using profile name: $PROFILE_NAME"
+
+##
+# Make sure profile matches OS (or at least says it does)
+if [[ "${RH_TYPE}-${RH_VERSION}" != "${PROFILE_OS_MATCH}" ]]; then
+    echo "profile OS tag is '${PROFILE_OS_MATCH}', expected match is '${RH_TYPE}-${RH_VERSION}'"
+    echo "the selected profile does not appear to match this OS, exiting"
+    exit 1
+fi
 
 ##
 # Check that everything's there. If not then we should probably stop.
@@ -150,8 +175,8 @@ if ! rpm -q scap-security-guide &> /dev/null; then
     REMOVE_SCAP_SECURITY_GUIDE="y"
 fi
 
-# truncate the log
-:> ${RUNROOT}/${LOGFILE}
+# truncate the log if it's there
+[ -f "${LOGFILE}" ] && :> ${LOGFILE}
 
 echo "do configuration changes..."
 for chk in $RULE_LIST; do
@@ -159,19 +184,19 @@ for chk in $RULE_LIST; do
         echo "WARNING: rule file not found: fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh"
     fi
     echo -n "running ${chk} ..."
-    echo "$(date) - ./fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh --" &>> ${RUNROOT}/${LOGFILE}
+    echo "$(date) - ./fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh --" &>> ${LOGFILE}
     ./fixes/${RH_TYPE}/${RH_VERSION}/${chk}.sh
     echo "done"
 done
 
 if [[ ${RUN_SCAP_AUDIT} == "y" ]]; then
 
-if [[ ${RH_TYPE} == "redhat" ]]; then
+if [[ ${RH_TYPE} == "rhel" ]]; then
 echo -n "generating SCAP report for ${RUN_SCAP_PROFILE} benchmark:"
 oscap xccdf eval --profile ${RUN_SCAP_PROFILE} \
   --report /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html \
   --results /tmp/$(hostname)-${RUN_SCAP_PROFILE}-results.xml \
-  /usr/share/xml/scap/ssg/content/ssg-rhel6-xccdf.xml &>> ${RUNROOT}/${LOGFILE}
+  ${SCAP_XCCDF_FILE} &>> ${LOGFILE}
 COMP=$(grep '<td class="score-percent">' /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html | sed -E "s/\s+<.*>(.*)<.*>/\1/")
 echo "done (${COMP})"
 echo "full report file: /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html"

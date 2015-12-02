@@ -20,5 +20,5 @@ keys /etc/ntp/keys
 server ${NTP1_SOURCE}
 server ${NTP2_SOURCE}
 EOF
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

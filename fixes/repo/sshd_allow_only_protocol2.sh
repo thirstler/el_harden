@@ -9,5 +9,5 @@ if ! [ $? -eq 0 ]; then
     echo "Protocol 2" >> /etc/ssh/sshd_config
 fi
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

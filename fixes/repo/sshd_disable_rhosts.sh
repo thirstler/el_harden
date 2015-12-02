@@ -7,5 +7,5 @@ grep -q ^IgnoreRhosts /etc/ssh/sshd_config && \
 if ! [ $? -eq 0 ]; then
     echo "IgnoreRhosts yes" >> /etc/ssh/sshd_config
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

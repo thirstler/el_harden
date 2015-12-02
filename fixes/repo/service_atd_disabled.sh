@@ -12,5 +12,5 @@
 #
 /sbin/service atd stop
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

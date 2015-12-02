@@ -12,5 +12,5 @@
 #
 /sbin/service bluetooth stop
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

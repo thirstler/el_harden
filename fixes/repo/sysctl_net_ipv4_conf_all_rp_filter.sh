@@ -19,5 +19,5 @@ else
 	echo "net.ipv4.conf.all.rp_filter = 1" >> /etc/sysctl.conf
 fi
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

@@ -12,5 +12,5 @@
 #
 /sbin/service nfslock stop
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

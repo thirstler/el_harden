@@ -58,5 +58,5 @@ else
          sed -i "$FIRST_MATCH_BLOCK s/^\([[:space:]]*Match[^\n]*\)/PermitRootLogin ${SSHD_PERMIT_ROOT_LOGIN}\n\1/I" $SSHD_CONFIG
     fi
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

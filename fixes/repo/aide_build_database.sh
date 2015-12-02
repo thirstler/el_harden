@@ -40,5 +40,5 @@ if [ ! -f /var/lib/aide/aide.db.gz ]; then
     mv /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
     echo "...done."
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

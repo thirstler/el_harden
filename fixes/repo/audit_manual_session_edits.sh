@@ -8,5 +8,5 @@
 fix_audit_watch_rule "/var/run/utmp" "wa" "session"
 fix_audit_watch_rule "/var/log/btmp" "wa" "session"
 fix_audit_watch_rule "/var/log/wtmp" "wa" "session"
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

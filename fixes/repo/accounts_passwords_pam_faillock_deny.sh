@@ -37,5 +37,5 @@ do
 	fi
 done
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

@@ -28,5 +28,5 @@ include /etc/logrotate.d
     rotate 1
 }
 EOF
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

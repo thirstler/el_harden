@@ -14,5 +14,5 @@ for rpc_entry in ${IPV6_RPC_ENTRIES[@]}
 do
 	sed -i "/^$rpc_entry[[:space:]]\+tpi\_.*inet6.*/d" /etc/netconfig
 done
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

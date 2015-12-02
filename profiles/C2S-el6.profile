@@ -1,6 +1,7 @@
 ################################################################################
 # Remediation profile configuration for the Fedora SSG C2S profile
 PROFILE_NAME="C2S-el6"
+PROFILE_OS_MATCH="rhel-6"
 
 ##
 # We need a time-source. C2S wants two sources for some reason.
@@ -54,8 +55,9 @@ CRACKLIB_PASSWORD_MINLEN="14"
 PAM_FAILLOCK_DENY="3"
 
 ##
-# Fedora SSG SCAP profile this rule list should be associated with
+# OpenSCAP configuration.
 RUN_SCAP_PROFILE="C2S" # a valid profile name
+SCAP_XCCDF_FILE="/usr/share/xml/scap/ssg/content/ssg-rhel6-xccdf.xml"
 
 ##
 # C2S benchmark aped from the CIS bench.

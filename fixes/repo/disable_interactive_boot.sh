@@ -7,5 +7,5 @@ grep -q ^PROMPT /etc/sysconfig/init && \
 if ! [ $? -eq 0 ]; then
     echo "PROMPT=no" >> /etc/sysconfig/init
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

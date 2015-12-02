@@ -19,5 +19,5 @@ else
 	echo "kernel.exec-shield = 1" >> /etc/sysctl.conf
 fi
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

@@ -5,4 +5,4 @@
 if rpm -qa | grep -q dhcp; then
     yum -y erase dhcp
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}

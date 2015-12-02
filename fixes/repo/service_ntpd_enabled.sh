@@ -16,5 +16,5 @@ yum -y install ntp
 #
 /sbin/service ntpd start
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

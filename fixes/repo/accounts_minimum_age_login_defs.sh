@@ -9,5 +9,5 @@ if ! [ $? -eq 0 ]; then
     echo "PASS_MIN_DAYS      ${MINIMUM_AGE_LOGIN_DEFS}" >> /etc/login.defs
 fi
 
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

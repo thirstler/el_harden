@@ -95,5 +95,5 @@ do
     echo ${EXPECTED_RULE} >> ${AUDIT_RULES_FILE}
   fi
 done
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

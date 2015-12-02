@@ -3,5 +3,5 @@
 
 {
 chgrp root /etc/passwd
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

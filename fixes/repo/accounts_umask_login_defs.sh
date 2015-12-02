@@ -8,5 +8,5 @@ grep -q UMASK /etc/login.defs && \
 if ! [ $? -eq 0 ]; then
     echo "UMASK $var_accounts_user_umask" >> /etc/login.defs
 fi
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 

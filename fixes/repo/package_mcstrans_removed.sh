@@ -3,5 +3,5 @@
 
 {
 yum -q -y erase mcstrans
-} &>> ${RUNROOT}/${LOGFILE}
+} &>> ${LOGFILE}
 
