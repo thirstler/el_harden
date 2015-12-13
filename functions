@@ -90,8 +90,8 @@ add_pam_cracklib_opt () {
 
 show_help () {
     cat << EOF
-Usage: run [OPTION]...
-Alters system configuration pursuant to the selected profile.
+Usage: ${0} [OPTION]...
+Alters system configuration according to the selected profile.
 
 Possible arguments:
   -c, --config    select a configuration file other than the default ("config"

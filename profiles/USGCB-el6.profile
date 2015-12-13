@@ -56,6 +56,7 @@ PAM_FAILLOCK_DENY="3"
 ##
 # Fedora SSG SCAP profile this rule list should be associated with
 RUN_SCAP_PROFILE="usgcb-rhel6-server" # a valid profile name
+SCAP_XCCDF_FILE=/usr/share/xml/scap/ssg/content/ssg-rhel6-xccdf.xml
 
 ##
 # United States Government Configuration Baseline. SCAP rules for that.

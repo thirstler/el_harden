@@ -3,6 +3,7 @@
 PROFILE_NAME="STIG-el6"
 PROFILE_OS_MATCH="rhel-6"
 
+
 ##
 # We need a time-source.
 NTP1_SOURCE="2.fedora.pool.ntp.org"
@@ -61,6 +62,7 @@ BANNER_TEXT="I've read & consent to terms in IS user agreem't."
 ##
 # Fedora SSG SCAP profile this rule list should be associated with
 RUN_SCAP_PROFILE="stig-rhel6-server-upstream" # a valid profile name
+SCAP_XCCDF_FILE=/usr/share/xml/scap/ssg/content/ssg-rhel6-xccdf.xml
 
 ##
 # DISA Security Technical Implimentation Guide (STIG)

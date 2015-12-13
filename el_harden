@@ -16,19 +16,17 @@
 # just go to "config" and follow it around.
 #
 ################################################################################
-. ./config
 . ./functions
 ################################################################################
 
 TEMP=$(getopt -o c:p:h --long config:,profile:,help -- "$@")
 eval set -- "$TEMP"
 
-
 # extract options and their arguments into variables.
 while true ; do
     case "$1" in
         -c|--config) CONFIG_FILE="$2" ; shift 2 ;;
-        -h|--help) show_help ; shift 1;;
+        -h|--help) show_help ; exit 1;;
         --) shift ; break ;;
         *) echo "Internal error!" ; exit 1 ;;
     esac
@@ -36,14 +34,17 @@ done
 
 echo 
 
-
-##
+################################################################################
 # Sanity checks
 : ${CONFIG_FILE:="./config"}
 if [ ! -f "${CONFIG_FILE}" ]; then
     echo "hellooooo? config file? (${CONFIG_FILE})"
     exit 1
 fi
+
+##
+# source the selected config file
+. ${CONFIG_FILE} 
 
 if [[ "$PROFILE_NAME" == "" ]]; then
     echo "no profile loaded"
@@ -55,8 +56,6 @@ if [[ "$(id -u)" != "0" ]]; then
     exit 1
 fi
 
-##
-# Sanity check distribution and set some values
 set_rh_release || exit 1
 
 echo -n "running for $RH_DIST ver ${RH_VERSION}"
@@ -100,6 +99,20 @@ while true; do
     [ "$(echo $YN|tr [:upper:] [:lower:])" == "y" ] && break
     [ "$(echo $YN|tr [:upper:] [:lower:])" == "n" ] && exit 1
 done
+
+##
+# Stop if we can't install packages
+if [[ "${RH_TYPE}" == "rhel" ]]; then
+    echo -n "making sure you can install packages..."
+    if ! subscription-manager status > /dev/null 2>&1; then
+        if [ ! -f /etc/sysconfig/rhn/systemid ]; then
+            echo "failed"
+            echo "system needs to be subscribed to install packages"
+            exit 1
+        fi
+    fi
+    echo "ok"
+fi
 
 if [[ "${WRITE_DEFAULT_FIREWALL}" == "y" ]]; then
 echo -n "writing permissive firewall configuration..."
@@ -189,26 +202,38 @@ for chk in $RULE_LIST; do
     echo "done"
 done
 
-if [[ ${RUN_SCAP_AUDIT} == "y" ]]; then
+if [ ${RUN_SCAP_AUDIT} == "y" ] &&
+   [ "${RUN_SCAP_PROFILE}" != "" ] &&
+   [ "${SCAP_XCCDF_FILE}" != "" ]; then
 
-if [[ ${RH_TYPE} == "rhel" ]]; then
-echo -n "generating SCAP report for ${RUN_SCAP_PROFILE} benchmark:"
+[ -f /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html ] && mv /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report-$(date +%Y-%m-%d-%H:%M:%S).html 
+
+echo "generating SCAP report for ${RUN_SCAP_PROFILE} benchmark:"
+cat << EOF
+oscap xccdf eval --profile ${RUN_SCAP_PROFILE} \
+  --report /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html \
+  --results /tmp/$(hostname)-${RUN_SCAP_PROFILE}-results.xml \
+  ${SCAP_XCCDF_FILE} 
+EOF
 oscap xccdf eval --profile ${RUN_SCAP_PROFILE} \
   --report /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html \
   --results /tmp/$(hostname)-${RUN_SCAP_PROFILE}-results.xml \
   ${SCAP_XCCDF_FILE} &>> ${LOGFILE}
 COMP=$(grep '<td class="score-percent">' /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html | sed -E "s/\s+<.*>(.*)<.*>/\1/")
-echo "done (${COMP})"
+echo "SCAP audit done (${COMP})"
 echo "full report file: /tmp/$(hostname)-${RUN_SCAP_PROFILE}-report.html"
 echo ""
 echo "reboot and rerun SCAP scan (or this script) for more accuracy in this report."
 echo "A reboot is needed to update some detections."
 else
 cat << EOF
-OS is not Red Hat (it's ${RH_DIST}), please download the Fedora SSG and scan
-manuallly
+
+looks like you're missing somthing if you want an SCAP audit:
+RUN_SCAP_AUDIT=${RUN_SCAP_AUDIT}
+RUN_SCAP_PROFILE=${RUN_SCAP_PROFILE}
+SCAP_XCCDF_FILE=${SCAP_XCCDF_FILE}
+
 EOF
-fi
 fi
 
 echo -n "clean-up..."

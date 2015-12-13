@@ -29,7 +29,8 @@ BOOTLOADER_PASSWORD=${ADMIN_PASSWD}
 # ROOT_PASSWORD directive is ignored. ROOT_PASSWD should be set to the root
 # password hash if we're dot disabling the root account.
 IGNORE_ROOT="n"
-DISABLE_ROOT="y"
+DISABLE_ROOT="y" # Note that this sets '!!' as the root pw. A separate SCAP
+                 # rule will disable root via /etc/securetty in some profiles.
 ROOT_PASSWD=
 
 ##
@@ -37,7 +38,7 @@ ROOT_PASSWD=
 # to be set to a valid fedora SSG profile name in the selected profile).
 RUN_SCAP_AUDIT="y"
 
-##
+##SCAP_XCCDF_FILE
 # Set to anything but "y" to skip writing a default (permissive) iptables
 # configfile file.
 WRITE_DEFAULT_FIREWALL="y"
@@ -60,5 +61,5 @@ LOGFILE="/tmp/el_harden.log"
 
 export IGNORE_ROOT ROOT_PASSWD DISABLE_ROOT LOGFILE ADMIN_PASSWD \
 BOOTLOADER_PASSWORD ADMIN_USER ADMIN_UID RUN_SCAP_AUDIT RUN_SCAP_PROFILE \
-TARGET_LOG_HOST WRITE_DEFAULT_FIREWALL NTP1_SOURCE
+TARGET_LOG_HOST WRITE_DEFAULT_FIREWALL NTP1_SOURCE SCAP_XCCDF_FILE
 
